@@ -1,0 +1,5 @@
+User-agent: *
+Crawl-delay: 10
+User-agent: NinTechNet
+Allow: *
+Crawl-delay: 10
