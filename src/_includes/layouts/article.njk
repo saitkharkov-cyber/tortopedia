@@ -13,13 +13,14 @@
 
 	<div id="primary" class="content-area">
 								 
-										<main id="main" class="site-main">
+										{% if post_id == 645 %}{% include "partials/recipe-schema-marshmallow.njk" %}{% endif %}
+		<main id="main" class="site-main">
 
 		{{ content | safe }}
 
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Post navigation</h2>
-		<div class="nav-links"><div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div><div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div></div>
+		<div class="nav-links">{% if prev_url %}<div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div>{% endif %}{% if next_url %}<div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div>{% endif %}</div>
 	</nav>
 		</main>
 	</div>
