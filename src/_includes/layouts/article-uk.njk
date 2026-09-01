@@ -28,7 +28,7 @@
  		<script src='https://www.google.com/recaptcha/api.js'></script>	
 	</head>
   
-  <body class="post-template-default single single-post postid-397 single-format-standard group-blog">
+  <body class="post-template-default single single-post postid-{{ post_id }} single-format-standard group-blog">
 		    <a class="skip-link" href="./#content">
       Перейти до основного матеріалу  
 		</a>
@@ -56,8 +56,8 @@
           <div class="menu-menu-main-container"><ul id="primary-menu" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="../">Головна сторінка</a></li>
 <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-87"><a href="../mastic-decoration/">Прикрашання мастикою</a>
 <ul class="sub-menu">
-	<li id="menu-item-390" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-390"><a href="../category/uroki-lepki/">Уроки ліплення</a></li>
-	<li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-160"><a href="../category/vse-o-mastike/">Все про мастику</a></li>
+	<li id="menu-item-390" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "uroki-lepki" %} current-post-ancestor current-menu-parent current-post-parent{% endif %} menu-item-390"><a href="../category/uroki-lepki/">Уроки ліплення</a></li>
+	<li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "vse-o-mastike" %} current-post-ancestor current-menu-parent current-post-parent{% endif %} menu-item-160"><a href="../category/vse-o-mastike/">Все про мастику</a></li>
 	<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="./#">Торти на свята</a></li>
 	<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="./#">Що почитати</a></li>
 	<li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="./#">Трафарети</a></li>
@@ -67,23 +67,24 @@
 <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="../about/">Про Тортопедію</a></li>
 <li id="menu-item-9999999999" class="menu-item menu-item-type-custom menu-item-object-custom menu_item_wpglobus_menu_switch wpglobus-selector-link wpglobus-current-language menu-item-9999999999"><a href="./"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_uk">uk</span></a>
 <ul class="sub-menu">
-	<li id="menu-item-wpglobus_menu_switch_ru" class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_ru"><a href="../../kakaya-mastika-luchshe-dlya-obtyazhki-torta/"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a></li>
+	<li id="menu-item-wpglobus_menu_switch_ru" class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_ru"><a href="{{ lang_switch_url }}"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a></li>
 </ul>
 </li>
 </ul></div>				</nav>
 			</header>
       
-      <div class="container"><div id="content" class="site-content"><div id="crumbs"><a href="../">Home</a> <span class="separator">&gt;</span> <a href="../category/vse-o-mastike/">Все про мастику</a> <span class="separator">&gt;</span> <span class="current">Обираємо мастику для обтягування торта &#8211; яка краще</span></div>				
+      <div class="container"><div id="content" class="site-content"><div id="crumbs"><a href="../">Home</a> <span class="separator">&gt;</span> <a href="../category/{{ category_slug }}/">{{ category_title }}</a> <span class="separator">&gt;</span> <span class="current">{{ title | safe }}</span></div>				
 
 	<div id="primary" class="content-area">
 								 
-										<main id="main" class="site-main">
+										{% if post_id == 645 %}{% include "partials/recipe-schema-marshmallow-uk.njk" %}{% endif %}
+											<main id="main" class="site-main">
 
 		{{ content | safe }}
 
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Post navigation</h2>
-		<div class="nav-links"><div class="nav-previous"><a href="../4-recepta-shokoladnoi-mastiki/" rel="prev">4 перевірених рецепта шоколадної мастики</a></div><div class="nav-next"><a href="../tort-s-figurkami-m-ms-iz-mastiki/" rel="next">Торт з фігурками M&#038;M&#8217;s з мастики &#8211; просто і оригінально</a></div></div>
+		<div class="nav-links">{% if prev_url %}<div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div>{% endif %}{% if next_url %}<div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div>{% endif %}</div>
 	</nav>
 		</main>
 	</div>
