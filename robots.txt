@@ -1,5 +1,4 @@
 User-agent: *
-Crawl-delay: 10
-User-agent: NinTechNet
-Allow: *
-Crawl-delay: 10
+Allow: /
+
+Sitemap: https://tortopedia.in.ua/sitemap.xml
