@@ -2,14 +2,14 @@
 <html lang="{{ lang }}" prefix="og: http://ogp.me/ns#">
   {% if lang == "uk-UA" %}{% include "partials/head-uk.njk" %}{% else %}{% include "partials/head.njk" %}{% endif %}
   
-  <body class="post-template-default single single-post postid-397 single-format-standard group-blog">
+  <body class="post-template-default single single-post postid-{{ post_id }} single-format-standard group-blog">
 		    <a class="skip-link" href="./#content">
       Перейти к основному содержанию  
 		</a>
     <div id="page" class="site">
       {% if lang == "uk-UA" %}{% include "partials/header-uk.njk" %}{% else %}{% include "partials/header.njk" %}{% endif %}
       
-      <div class="container"><div id="content" class="site-content"><div id="crumbs"><a href="../">Home</a> <span class="separator">&gt;</span> <a href="../category/vse-o-mastike/">Всё о мастике</a> <span class="separator">&gt;</span> <span class="current">Выбираем мастику для обтяжки торта &#8211; какая лучше</span></div>				
+      <div class="container"><div id="content" class="site-content"><div id="crumbs"><a href="../">Home</a> <span class="separator">&gt;</span> <a href="../category/{{ category_slug }}/">{{ category_title }}</a> <span class="separator">&gt;</span> <span class="current">{{ title | safe }}</span></div>				
 
 	<div id="primary" class="content-area">
 								 
@@ -19,7 +19,7 @@
 
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Post navigation</h2>
-		<div class="nav-links"><div class="nav-previous"><a href="../4-recepta-shokoladnoi-mastiki/" rel="prev">4 проверенных рецепта шоколадной мастики</a></div><div class="nav-next"><a href="../tort-s-figurkami-m-ms-iz-mastiki/" rel="next">Торт с фигурками M&#038;M&#8217;s из мастики &#8211; просто и оригинально</a></div></div>
+		<div class="nav-links"><div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div><div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div></div>
 	</nav>
 		</main>
 	</div>

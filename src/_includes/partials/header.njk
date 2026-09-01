@@ -21,8 +21,8 @@
           <div class="menu-menu-main-container"><ul id="primary-menu" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="../">Главная страница</a></li>
 <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-87"><a href="../mastic-decoration/">Украшение мастикой</a>
 <ul class="sub-menu">
-	<li id="menu-item-390" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-390"><a href="../category/uroki-lepki/">Уроки лепки</a></li>
-	<li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-160"><a href="../category/vse-o-mastike/">Всё о мастике</a></li>
+	<li id="menu-item-390" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "uroki-lepki" %} current-post-ancestor current-menu-parent current-post-parent{% endif %} menu-item-390"><a href="../category/uroki-lepki/">Уроки лепки</a></li>
+	<li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "vse-o-mastike" %} current-post-ancestor current-menu-parent current-post-parent{% endif %} menu-item-160"><a href="../category/vse-o-mastike/">Всё о мастике</a></li>
 	<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="./#">Торты на праздники</a></li>
 	<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="./#">Что почитать</a></li>
 	<li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="./#">Трафареты</a></li>
@@ -32,7 +32,7 @@
 <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="../about/">О Тортопедии</a></li>
 <li id="menu-item-9999999999" class="menu-item menu-item-type-custom menu-item-object-custom menu_item_wpglobus_menu_switch wpglobus-selector-link wpglobus-current-language menu-item-9999999999"><a href="./"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a>
 <ul class="sub-menu">
-	<li id="menu-item-wpglobus_menu_switch_uk" class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_uk"><a href="../uk/kakaya-mastika-luchshe-dlya-obtyazhki-torta/"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_uk">uk</span></a></li>
+	<li id="menu-item-wpglobus_menu_switch_uk" class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_uk"><a href="{{ lang_switch_url }}"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_uk">uk</span></a></li>
 </ul>
 </li>
 </ul></div>				</nav>
