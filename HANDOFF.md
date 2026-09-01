@@ -1,130 +1,128 @@
 # HANDOFF — Tortopedia
 
-Date: 2026-09-01
-Branch: `pilot-11ty`
+Дата: 2026-09-01
+Ветка: `pilot-11ty`
 
-## Current state
+## Текущее состояние
 
-The Eleventy pilot is working and the article migration stage is complete.
+Eleventy-пилот работает, этап миграции статей завершён.
 
 - Eleventy: 3.1.6
-- Build command: `npm run build`
-- Input: `src`
-- Output: `_site-pilot`
-- `_site-pilot/`, `node_modules/`, `backup/` are ignored by Git.
-- Cloudflare is not doing this Eleventy build; generation is currently local/test-first.
+- Команда сборки: `npm run build`
+- Вход: `src`
+- Выход: `_site-pilot`
+- `_site-pilot/`, `node_modules/`, `backup/` игнорируются Git.
+- Cloudflare сейчас не собирает Eleventy; генерация выполняется локально по схеме test-first.
 
-## Completed today
+## Что сделано сегодня
 
-### Eleventy article templates
+### Шаблоны статей Eleventy
 
-Two article layouts are in use:
+Используются два layout-файла:
 
 - `src/_includes/layouts/article.njk` — RU
 - `src/_includes/layouts/article-uk.njk` — UA
 
-They parameterize article-specific data such as:
+В них параметризованы данные, специфичные для конкретной статьи:
 
 - canonical / hreflang
-- language switch URL
+- URL переключения языка
 - post ID
-- category slug/title and active menu state
-- previous/next article links
+- slug/title категории и активное состояние меню
+- ссылки на предыдущую/следующую статью
 - title
-- main image data
+- данные главного изображения
 
-Article body remains in the article source file under `src/.../index.html`.
+Тело статьи остаётся в исходном файле статьи `src/.../index.html`.
 
-### Migrated articles
+### Перенесённые статьи
 
-All article pages are now represented in Eleventy sources:
+Все статьи сайта представлены в исходниках Eleventy:
 
-- 20 RU articles
-- 20 UA articles
-- total: 40 article outputs
+- 20 RU
+- 20 UA
+- всего 40 статей
 
-Latest successful build produced 40 files with no Eleventy errors.
+Последняя успешная сборка сформировала 40 файлов без ошибок Eleventy.
 
-### Verification
+### Проверка результата
 
-RU articles were compared against the original static HTML and passed after normalization of benign differences.
+RU-статьи были сравнены с исходным статическим HTML и прошли проверку после нормализации допустимых различий.
 
-UA articles were also compared against the original static HTML and all 20 passed after benign normalization.
+UA-статьи также были сравнены с исходным статическим HTML; все 20 прошли проверку после такой же нормализации.
 
-Known benign differences intentionally ignored during comparison:
+Допустимые различия, которые намеренно не считаются ошибками:
 
-- old per-page `ms-icon-144x144.png?v=...` cache-buster values versus shared template value
-- harmless whitespace / final newline formatting
-- equivalent self-links such as `./` versus explicit sibling-relative article URLs
+- старые индивидуальные значения cache-buster у `ms-icon-144x144.png?v=...` против общего значения в шаблоне;
+- безвредные различия пробелов и финального переноса строки;
+- эквивалентные self-links вроде `./` и явного sibling-relative URL статьи.
 
-Do not spend time trying to reproduce these byte-for-byte unless there is an actual functional reason.
+Не тратить время на восстановление побайтового совпадения этих деталей без функциональной причины.
 
-### Recipe exception
+### Исключение Recipe
 
-`mastika-iz-marshmellou-recept` contains a unique hidden Recipe microdata block.
+Страница `mastika-iz-marshmellou-recept` содержит уникальный скрытый блок Recipe microdata.
 
-Separate partials preserve this legacy block:
+Для сохранения этой старой разметки используются отдельные partial-файлы:
 
 - `src/_includes/partials/recipe-schema-marshmallow.njk`
 - `src/_includes/partials/recipe-schema-marshmallow-uk.njk`
 
-The layouts include them only for `post_id == 645`.
+Layout подключает их только при `post_id == 645`.
 
-## Important commits
+## Важные коммиты
 
-Current article-migration chain:
+Цепочка миграции статей:
 
-- `d0bb207` — Migrate Ukrainian articles to Eleventy
-- `5f2bd7e` — Migrate Russian articles to Eleventy
-- `d82ed1d` — Generalize Eleventy article template
-- `2b7ebf8` — Add Eleventy pilot for article templates
+- `d0bb207` — `Migrate Ukrainian articles to Eleventy`
+- `5f2bd7e` — `Migrate Russian articles to Eleventy`
+- `d82ed1d` — `Generalize Eleventy article template`
+- `2b7ebf8` — `Add Eleventy pilot for article templates`
 
-Before this HANDOFF commit, `pilot-11ty` local and `origin/pilot-11ty` both pointed to `d0bb207`.
+Перед созданием первого HANDOFF локальная и удалённая `pilot-11ty` указывали на `d0bb207`.
 
-`main` / `origin/main` remain at `e602187` (`Remove empty sitemap lists`).
+Ветка `pilot-11ty` уже отправлена в GitHub. В `main` этот пилот пока не сливать.
 
-Do not merge `pilot-11ty` into `main` yet.
+## Локальные миграционные скрипты
 
-## Local-only migration scripts
-
-Two one-off helper scripts exist locally and were intentionally NOT committed:
+Два одноразовых вспомогательных скрипта существуют только локально и намеренно НЕ закоммичены:
 
 - `migrate-ru-articles.ps1`
 - `migrate-uk-articles.ps1`
 
-At session end they were the only untracked files shown by `git status --short`.
+На конец сессии это были единственные untracked-файлы в `git status --short`.
 
-They are migration utilities, not runtime/site files. Keep them local, delete them later, or add them to a local Git exclude if desired. Do not accidentally deploy/commit them without a reason.
+Это утилиты миграции, а не runtime-файлы сайта. Их можно оставить локально или позже удалить. Без отдельной причины не коммитить и не деплоить.
 
-## Site scope still outside Eleventy
+## Что ещё не перенесено в Eleventy
 
-The repository still contains the original static site alongside the pilot sources.
+В репозитории по-прежнему лежит исходная статическая версия сайта рядом с пилотными исходниками.
 
-Article migration is complete, but the remaining non-article page types have not yet been migrated to Eleventy. The next stage should cover the remaining 14 pages, approximately:
+Статьи перенесены полностью, но остальные типы страниц ещё не мигрированы. Следующий этап — оставшиеся примерно 14 страниц:
 
-- 2 homepages: RU + UA
-- category/archive pages, including pagination
-- standard pages such as `about`, `html-sitemap`, `mastic-decoration` in RU + UA
+- 2 главные: RU + UA;
+- страницы категорий/архивов, включая пагинацию;
+- обычные страницы вроде `about`, `html-sitemap`, `mastic-decoration` в RU + UA.
 
-Treat these as separate page types instead of forcing them through the article layout.
+Их нужно рассматривать как отдельные типы страниц, а не пытаться пропустить через layout статьи.
 
-## Recommended next session
+## Следующая сессия
 
 1. `git checkout pilot-11ty`
 2. `git pull`
 3. `git status --short`
 4. `npm run build`
-5. Start with ONE non-article page type as a pilot, compare generated HTML to the current static page, then generalize only after the single-page test passes.
+5. Взять ОДИН тип не-статейной страницы как пилот, сравнить с текущим статическим HTML и только после успешной проверки обобщать шаблон.
 
-Suggested first candidate: a simple standard page (`about`) rather than homepage/category pagination.
+Предпочтительный первый кандидат — простая обычная страница `about`, а не главная и не категория с пагинацией.
 
-Continue using the same rule as for articles: preserve visible/functionally meaningful output; do not chase harmless byte-level legacy differences.
+Сохранять тот же принцип, что и для статей: важен визуально и функционально эквивалентный результат; бессмысленные побайтовые различия старого HTML не воспроизводить.
 
-## Safety / workflow notes
+## Правила безопасности и процесса
 
-- Test one page before mass migration.
-- Use local Eleventy build and inspect generated HTML before commits.
-- Source `.html` files use Liquid; layouts `.njk` use Nunjucks.
-- Avoid broad regex/whitespace rewrites across files.
-- For PowerShell writes, preserve UTF-8 without BOM using `[Text.UTF8Encoding]::new($false)`.
-- Do not infer encoding damage from console mojibake alone; verify file contents directly.
+- Сначала тестировать одну страницу, затем массовая миграция.
+- Собирать Eleventy локально и проверять итоговый HTML перед коммитом.
+- Исходники `.html` используют Liquid; layout-файлы `.njk` — Nunjucks.
+- Не применять широкие regex/whitespace-замены по всему сайту.
+- Для PowerShell-записи сохранять UTF-8 без BOM через `[Text.UTF8Encoding]::new($false)`.
+- Не делать вывод о повреждении кодировки только по mojibake в консоли; проверять содержимое файла напрямую.
