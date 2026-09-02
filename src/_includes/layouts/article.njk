@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" prefix="og: http://ogp.me/ns#">
+  {% if lang == "uk-UA" %}{% include "partials/head-uk.njk" %}{% else %}{% include "partials/head.njk" %}{% endif %}
+  
+  <body class="post-template-default single single-post postid-{{ post_id }} single-format-standard group-blog">
+		    <a class="skip-link" href="./#content">
+      Перейти к основному содержанию  
+		</a>
+    <div id="page" class="site">
+      {% if lang == "uk-UA" %}{% include "partials/header-uk.njk" %}{% else %}{% include "partials/header.njk" %}{% endif %}
+      
+      <div class="container"><div id="content" class="site-content"><div id="crumbs"><a href="../">Home</a> <span class="separator">&gt;</span> <a href="../category/{{ category_slug }}/">{{ category_title }}</a> <span class="separator">&gt;</span> <span class="current">{{ title | safe }}</span></div>				
+
+	<div id="primary" class="content-area">
+								 
+										{% if post_id == 645 %}{% include "partials/recipe-schema-marshmallow.njk" %}{% endif %}
+		<main id="main" class="site-main">
+
+		{{ content | safe }}
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">{% if prev_url %}<div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div>{% endif %}{% if next_url %}<div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div>{% endif %}</div>
+	</nav>
+		</main>
+	</div>
+
+
+<aside id="secondary" class="widget-area">
+	<div id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="../">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="../kak-ukrasit-tort-na-den-rozhdeniya-muzhu/">Как украсить торт на день рождения мужу: смокинг с галстуком-бабочкой из мастики</a>
+									</li>
+											<li>
+					<a href="../korporativnyi-tort-na-novyi-god-3-gotovye-idei/">Мастер-класс: корпоративный торт на Новый год &#8211; 3 готовые идеи</a>
+									</li>
+											<li>
+					<a href="../kak-ukrasit-tort-na-novyi-god-v-domashnih-usloviyah/">Как украсить торт на Новый год в домашних условиях: фигурки снеговиков и простая елочка</a>
+									</li>
+											<li>
+					<a href="../kak-ukrasit-tort-na-1-sentyabrya/">Как украсить торт на 1 сентября &#8211; фото и видео</a>
+									</li>
+											<li>
+					<a href="../kak-sdelat-mramornuyu-mastiku/">Как сделать мраморную мастику</a>
+									</li>
+					</ul>
+		</div></aside>
+</div></div>	
+	{% if lang == "uk-UA" %}{% include "partials/footer-uk.njk" %}{% else %}{% include "partials/footer.njk" %}{% endif %}
+
+</div>
+
+
+
+<script type='text/javascript' src='../wp-content/themes/bakes-and-cakes/js/tab.js'></script>
+<script type='text/javascript' src='../wp-content/themes/bakes-and-cakes/js/sameheight.js'></script>
+<script type='text/javascript' src='../wp-content/themes/bakes-and-cakes/js/jquery.sidr.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var bakes_and_cakes_data = {"auto":"1","loop":"1","pager":"1","animation":"slide","speed":"7000","a_speed":"600"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/themes/bakes-and-cakes/js/custom.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGlobus = {"version":"1.9.24","language":"ru","enabledLanguages":["ru","uk"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/wpglobus/includes/js/wpglobus.min.js'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min.js'></script>
+
+</body>
+</html>
+
