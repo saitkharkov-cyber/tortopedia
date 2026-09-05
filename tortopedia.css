@@ -3,3 +3,4 @@
 @media only screen and (max-width:767px){.content-area{padding-left:0;padding-right:0;}.content-area .post .text-holder,.content-area .page .text-holder{padding:33px 10px;}}
 @media only screen and (max-width:767px){#masthead{background:#fff;}}
 @media only screen and (max-width:767px){.content-area .post .entry-header h1.entry-title,.content-area .page .entry-header h1.entry-title{color:#e978a4;}}
+@media only screen and (max-width:767px){.entry-content>ul:first-of-type a{color:#55aeb3;}}
