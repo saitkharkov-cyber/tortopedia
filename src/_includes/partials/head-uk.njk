@@ -1,5 +1,5 @@
 <head>
-  <title>{{ seo_title or title | safe }}</title>
+  <title>{{ seo_title or title | safe }}</title>{% if seo_description %}<meta name="description" content="{{ seo_description | safe }}">{% endif %}
   <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script><meta charset="utf-8">
   <link rel="canonical" href="{{ canonical }}" />
   <link rel="alternate" hreflang="ru-UA" href="{{ hreflang_ru }}" />
