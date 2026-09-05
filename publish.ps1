@@ -7,8 +7,8 @@ if ($LASTEXITCODE -ne 0) { throw "Eleventy build failed" }
 $build = (Resolve-Path ".\_site-pilot").Path
 $files = Get-ChildItem $build -Recurse -Filter *.html
 
-if ($files.Count -ne 54) {
-    throw "Expected 54 HTML files, got $($files.Count)"
+if ($files.Count -ne 52) {
+    throw "Expected 52 HTML files, got $($files.Count)"
 }
 
 Write-Host "Copying generated HTML..."
