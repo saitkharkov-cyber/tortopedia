@@ -58,6 +58,13 @@ line-height:1;
 .sidr #sidr-id-menu-item-9999999999>.sidr-class-sub-menu li a{
 padding:0;
 }
+.sidr #sidr-id-menu-item-9999999999.sidr-class-wpglobus-current-language>a{
+color:#d95f8f;
+font-weight:600;
+}
+.sidr #sidr-id-menu-item-9999999999.sidr-class-wpglobus-current-language>a .sidr-class-wpglobus_language_name{
+color:#d95f8f;
+}
 }
 
 @media only screen and (max-width:767px){
