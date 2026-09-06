@@ -2,8 +2,8 @@
 <button type="button" class="mobile-menu-close" aria-label="Закрыть меню">×</button>
 <div class="menu-menu-main-container"><ul id="primary-menu" class="menu">
 {% if lang == "uk-UA" %}
-<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="/uk/">Головна сторінка</a></li>
-<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-87"><a href="/uk/mastic-decoration/">Прикрашання мастикою</a>
+<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home{% if active_page == "home" %} current-menu-item{% endif %} menu-item-84"><a href="/uk/">Головна сторінка</a></li>
+<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children{% if active_page == "mastic-decoration" %} current-menu-item{% endif %} menu-item-87"><a href="/uk/mastic-decoration/">Прикрашання мастикою</a>
 <ul class="sub-menu">
 <li id="menu-item-390" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "uroki-lepki" or active_category == "uroki" %} current-menu-item{% endif %} menu-item-390"><a href="/uk/category/uroki-lepki/">Уроки ліплення</a></li>
 <li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "vse-o-mastike" or active_category == "vse" %} current-menu-item{% endif %} menu-item-160"><a href="/uk/category/vse-o-mastike/">Все про мастику</a></li>
@@ -29,7 +29,7 @@
 <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="./#">Идеи и вдохновение</a></li>
 </ul>
 </li>
-<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="/about/">О Тортопедии</a></li>
+<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page{% if active_page == "about" %} current-menu-item{% endif %} menu-item-89"><a href="/about/">О Тортопедии</a></li>
 <li id="menu-item-9999999999" class="menu-item menu-item-type-custom menu-item-object-custom menu_item_wpglobus_menu_switch wpglobus-selector-link wpglobus-current-language menu-item-9999999999"><a href="./"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a>
 <ul class="sub-menu"><li id="menu-item-wpglobus_menu_switch_uk" class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_uk"><a href="{{ lang_switch_url }}"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_uk">uk</span></a></li></ul>
 </li>
