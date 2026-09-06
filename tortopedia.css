@@ -50,3 +50,9 @@ body.sidr-main-open #sidr-overlay{display:block;}
 @media only screen and (min-width:992px){
 .mobile-menu-close{display:none;}
 }
+@media only screen and (max-width:767px){
+	#mobile-header{transform:translateY(2px);}
+	.header-t .container{padding-left:18px;padding-right:12px;}
+	.header-t .container:after{display:none}
+	#mobile-header>a{width:36px;height:40px;}
+}
