@@ -1,1 +1,78 @@
-jQuery(document).ready(function(e){if("1"==bakes_and_cakes_data.auto)var a=!0;else a=!1;if("1"==bakes_and_cakes_data.loop)var i=!0;else i=!1;if("1"==bakes_and_cakes_data.pager)var t=!0;else t=!1;e("#slider").length&&e.fn.lightSlider&&e("#slider").lightSlider({item:1,slideMargin:0,mode:bakes_and_cakes_data.animation,speed:bakes_and_cakes_data.a_speed,auto:a,loop:i,pause:bakes_and_cakes_data.speed,pager:t,gallery:!1,galleryMargin:5,thumbMargin:5,enableDrag:!1,swipeThreshold:40,responsive:[{breakpoint:767,settings:{adaptiveHeight:!0,auto:a}}]}),e(".btn-top").click(function(){return e("html, body").animate({scrollTop:0},600),!1}),e("#responsive-menu-button").sidr({name:"sidr-main",source:"#site-navigation",side:"right"}),e(".map").click(function(){e(".map iframe").css("pointer-events","auto")}),e(".map").mouseleave(function(){e(".map iframe").css("pointer-events","none")}),e("body").on("click",'a[href="#"]',function(e){e.preventDefault()})});
+jQuery(document).ready(function(e){
+    if("1"==bakes_and_cakes_data.auto){
+        var a=!0;
+    }else{
+        a=!1;
+    }
+
+    if("1"==bakes_and_cakes_data.loop){
+        var i=!0;
+    }else{
+        i=!1;
+    }
+
+    if("1"==bakes_and_cakes_data.pager){
+        var t=!0;
+    }else{
+        t=!1;
+    }
+
+    e("#slider").length&&e.fn.lightSlider&&e("#slider").lightSlider({
+        item:1,
+        slideMargin:0,
+        mode:bakes_and_cakes_data.animation,
+        speed:bakes_and_cakes_data.a_speed,
+        auto:a,
+        loop:i,
+        pause:bakes_and_cakes_data.speed,
+        pager:t,
+        gallery:!1,
+        galleryMargin:5,
+        thumbMargin:5,
+        enableDrag:!1,
+        swipeThreshold:40,
+        responsive:[
+            {
+                breakpoint:767,
+                settings:{
+                    adaptiveHeight:!0,
+                    auto:a
+                }
+            }
+        ]
+    });
+
+    e(".btn-top").click(function(){
+        return e("html, body").animate({scrollTop:0},600),!1;
+    });
+
+    e("#responsive-menu-button").sidr({
+        name:"sidr-main",
+        source:"#site-navigation",
+        side:"right",
+        onOpen:function(){
+            e("body").addClass("sidr-main-open");
+        },
+        onClose:function(){
+            e("body").removeClass("sidr-main-open");
+        }
+    });
+
+    e("body").append('<div id="sidr-overlay"></div>');
+
+    e("body").on("click",".sidr-class-mobile-menu-close,#sidr-overlay",function(){
+        e.sidr("close","sidr-main");
+    });
+
+    e(".map").click(function(){
+        e(".map iframe").css("pointer-events","auto");
+    });
+
+    e(".map").mouseleave(function(){
+        e(".map iframe").css("pointer-events","none");
+    });
+
+    e("body").on("click",'a[href="#"]',function(e){
+        e.preventDefault();
+    });
+});
