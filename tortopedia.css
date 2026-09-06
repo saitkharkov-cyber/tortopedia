@@ -20,7 +20,7 @@
 .sidr ul li{line-height:1.35;border:0;}
 .sidr ul li:hover,.sidr ul li.active,.sidr ul li.sidr-class-active{line-height:1.35;}
 .sidr ul li a,.sidr ul li span{padding:14px 22px;color:#555;box-shadow:none!important;}
-.sidr ul li:hover>a,.sidr ul li:hover>span,.sidr ul li.active>a,.sidr ul li.active>span,.sidr ul li.sidr-class-active>a,.sidr ul li.sidr-class-active>span{box-shadow:none;background:#fff7fa;color:#e978a4;}
+.sidr ul li:hover>a,.sidr ul li:hover>span,.sidr ul li.active>a,.sidr ul li.active>span,.sidr ul li.sidr-class-active>a,.sidr ul li.sidr-class-active>span{box-shadow:none;background:#fff;color:#e978a4;}
 .sidr ul li ul{margin:0;padding:0 0 6px;border:0;}
 .sidr ul li ul li{line-height:1.35;font-size:14px;}
 .sidr ul li ul li:hover,.sidr ul li ul li.active,.sidr ul li ul li.sidr-class-active{line-height:1.35;}
