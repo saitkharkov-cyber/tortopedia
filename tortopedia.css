@@ -31,6 +31,33 @@
 .sidr .sidr-inner{padding-top:46px;}
 #sidr-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:999998;}
 body.sidr-main-open #sidr-overlay{display:block;}
+.sidr #sidr-id-menu-item-9999999999{
+display:flex;
+align-items:center;
+gap:8px;
+padding:12px 22px;
+}
+.sidr #sidr-id-menu-item-9999999999>a{
+padding:0;
+}
+.sidr #sidr-id-menu-item-9999999999>.sidr-class-sub-menu{
+display:flex!important;
+align-items:center;
+margin:0;
+padding:0;
+}
+.sidr #sidr-id-menu-item-9999999999>.sidr-class-sub-menu:before{
+content:"·";
+margin:0 8px;
+color:#aaa;
+}
+.sidr #sidr-id-menu-item-9999999999>.sidr-class-sub-menu li{
+font-size:14px;
+line-height:1;
+}
+.sidr #sidr-id-menu-item-9999999999>.sidr-class-sub-menu li a{
+padding:0;
+}
 }
 
 @media only screen and (max-width:767px){

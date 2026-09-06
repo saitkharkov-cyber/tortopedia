@@ -13,13 +13,13 @@
 <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="./#">Ідеї ​​та натхнення</a></li>
 </ul>
 </li>
-<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="/uk/about/">Про Тортопедію</a></li>
+<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page{% if active_page == "about" %} current-menu-item{% endif %} menu-item-89"><a href="/uk/about/">Про Тортопедію</a></li>
 <li id="menu-item-9999999999" class="menu-item menu-item-type-custom menu-item-object-custom menu_item_wpglobus_menu_switch wpglobus-selector-link wpglobus-current-language menu-item-9999999999"><a href="./"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_uk">uk</span></a>
 <ul class="sub-menu"><li id="menu-item-wpglobus_menu_switch_ru" class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_ru"><a href="{{ lang_switch_url }}"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a></li></ul>
 </li>
 {% else %}
-<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="/">Главная страница</a></li>
-<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-87"><a href="/mastic-decoration/">Украшение мастикой</a>
+<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home{% if active_page == "home" %} current-menu-item{% endif %} menu-item-84"><a href="/">Главная страница</a></li>
+<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children{% if active_page == "mastic-decoration" %} current-menu-item{% endif %} menu-item-87"><a href="/mastic-decoration/">Украшение мастикой</a>
 <ul class="sub-menu">
 <li id="menu-item-390" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "uroki-lepki" or active_category == "uroki" %} current-menu-item{% endif %} menu-item-390"><a href="/category/uroki-lepki/">Уроки лепки</a></li>
 <li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category{% if category_slug == "vse-o-mastike" or active_category == "vse" %} current-menu-item{% endif %} menu-item-160"><a href="/category/vse-o-mastike/">Всё о мастике</a></li>
