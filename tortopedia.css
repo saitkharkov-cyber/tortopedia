@@ -17,6 +17,23 @@
 .home .banner{display:none;}
 .mobile-home-banner{display:block;}
 .mobile-home-banner img{display:block;width:100%;height:auto;}
+.mobile-home-banner{
+position:relative;
+margin-bottom:18px;
+}
+.mobile-home-banner:after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:100%;
+height:9px;
+background:url(/wp-content/themes/bakes-and-cakes/images/banner-bg-bottom.png) repeat-x;
+z-index:2;
+}
+.home .intro .image-holder{
+display:none;
+}
 }
 /* New styles for mobile menu */
 @media only screen and (max-width:991px){
