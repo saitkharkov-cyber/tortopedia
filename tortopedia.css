@@ -138,3 +138,10 @@ box-shadow:none;
 @media only screen and (min-width:992px){
 .mobile-menu-close{display:none;}
 }
+@media only screen and (max-width:767px){
+.home .site-footer .sitemap-of-site{
+width:100%;
+justify-content:center;
+text-align:center;
+}
+}
