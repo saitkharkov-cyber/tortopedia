@@ -46,8 +46,7 @@
     -ms-flex-basis: 50%;
     flex-basis: 50%;
   }
-}
-@media (min-width: 768px) {
+
   .home section {
     padding: 89px 0 65px;
   }
@@ -378,8 +377,7 @@ h3.social-group__title {
   .page-id-59 #secondary.widget-area {
     padding-top: 129px;
   }
-}
-@media (min-width: 768px) {
+
   .category #secondary.widget-area {
     padding-top: 96px;
   }
@@ -2876,8 +2874,7 @@ object {
   color: #c4c4c4;
   text-decoration: none;
 }
-.site-footer .widget.widget_contact_form {
-}
+
 .site-footer .widget.widget_contact_form .form-holder {
   background: #fff;
   margin: -145px 40px 0;
@@ -3376,8 +3373,7 @@ a:focus {
   -webkit-transition: top 0s;
   transition: top 0s;
 }
-.wpglobus_flag {
-}
+
 ul.populargb {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4202,8 +4198,7 @@ html {
     letter-spacing:0;
     margin-bottom:20px;
   }
-}
-@media only screen and (max-width:767px) {
+
   .content-area .post .entry-header h1.entry-title,
   .content-area .page .entry-header h1.entry-title {
     font-size:34px;
@@ -4211,8 +4206,7 @@ html {
     letter-spacing:0;
     margin-bottom:20px;
   }
-}
-@media only screen and (max-width:767px) {
+
   .content-area {
     padding-left:0;
     padding-right:0;
@@ -4221,37 +4215,31 @@ html {
   .content-area .page .text-holder {
     padding:33px 10px;
   }
-}
-@media only screen and (max-width:767px) {
+
   #masthead {
     background:#fff;
   }
-}
-@media only screen and (max-width:767px) {
+
   .content-area .post .entry-header h1.entry-title,
   .content-area .page .entry-header h1.entry-title {
     color:#e978a4;
   }
-}
-@media only screen and (max-width:767px) {
+
   .entry-content>ul:first-of-type a {
     color:#55aeb3;
   }
-}
-@media only screen and (max-width:767px) {
+
   .entry-content ul,
   .entry-content ol {
     padding-left:24px;
   }
-}
-@media only screen and (max-width:767px) {
+
   .entry-content ul li::marker,
   .entry-content ol li::marker {
     color:#55aeb3;
     font-size:.9em;
   }
-}
-@media only screen and (max-width:767px) {
+
   .entry-content h2 {
     font-size:30px;
     line-height:38px;
@@ -4268,8 +4256,7 @@ html {
   .entry-content>ul:first-of-type li::marker {
     color:#666;
   }
-}
-@media only screen and (max-width:767px) {
+
   .entry-content h2 {
     font-size:26px;
     line-height:34px;
@@ -4294,15 +4281,13 @@ html {
     text-decoration:underline;
     text-underline-offset:2px;
   }
-}
-@media only screen and (max-width:767px) {
+
   .entry-content ul,
   .entry-content ol {
     margin-left:0;
     padding-left:12px;
   }
-}
-@media only screen and (max-width:767px) {
+
   #primary .post .entry-content ul,
   #primary .page .entry-content ul,
   #primary .post .entry-content ol,
@@ -4310,8 +4295,7 @@ html {
     margin-left:0;
     padding-left:12px;
   }
-}
-@media only screen and (max-width:767px) {
+
   #primary .post .entry-content h2,
   #primary .page .entry-content h2 {
     font-size:26px;
@@ -4593,13 +4577,11 @@ html {
     justify-content:center;
     text-align:center;
   }
-}
-@media only screen and (max-width:767px) {
+
   .home .advantages__title {
     margin-top:24px;
   }
-}
-@media only screen and (max-width:767px) {
+
   .content-area .post .entry-header h1.entry-title,
   .content-area .page .entry-header h1.entry-title {
     font-size:30px;
