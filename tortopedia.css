@@ -139,7 +139,7 @@ box-shadow:none;
 .mobile-menu-close{display:none;}
 }
 @media only screen and (max-width:767px){
-.home .site-footer .sitemap-of-site{
+.site-footer .sitemap-of-site{
 width:100%;
 justify-content:center;
 text-align:center;
