@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url("https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 .d-flex {
   display: -webkit-box;
   display: -moz-box;
@@ -22,7 +22,7 @@
   background: -moz-linear-gradient(top, #d3e4ff 1%, #9ec3ff 100%);
   background: -webkit-linear-gradient(top, #d3e4ff 1%, #9ec3ff 100%);
   background: linear-gradient(to bottom, #d3e4ff 1%, #9ec3ff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3e4ff', endColorstr='#9ec3ff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d3e4ff", endColorstr="#9ec3ff", GradientType=0);
   border: 1px solid #b7c4fd;
 }
 [displaynone] {
@@ -63,7 +63,7 @@
 }
 .home section .section-title {
   font-size: 55px;
-  font-family: 'Marck Script', cursive;
+  font-family: "Marck Script", cursive;
   line-height: 62px;
   margin-bottom: 35px;
 }
@@ -392,7 +392,7 @@ h3.social-group__title {
 }
 .advantages__title {
   text-align: center;
-  font: 50px 'Marck Script', cursive;
+  font: 50px "Marck Script", cursive;
   text-shadow: 0 1px 1px #A0375F;
 }
 .advantages__items-row {
@@ -475,7 +475,7 @@ h3.social-group__title {
   display: none;
 }
 customless includedhtml {
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -662,7 +662,7 @@ input,
 select,
 textarea {
   color: #666;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -738,7 +738,7 @@ html {
 }
 body {
   color:#666;
-  font:16px/28px 'Open Sans', sans-serif;
+  font:16px/28px "Open Sans", sans-serif;
   background:#f7f6f4;
   overflow-y: scroll;
   -webkit-text-size-adjust:100%;
@@ -963,22 +963,19 @@ a:active {
     display: block;
   }
 }
-.site-main .comment-navigation,
 .site-main .posts-navigation,
-.site-main .post-navigation {
+.site-main .post-navigation{
   margin: 0 0 1.5em;
   overflow: hidden;
   padding: 0 33px 0;
 }
-.comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.post-navigation .nav-previous{
   float: left;
   width: 50%;
 }
-.comment-navigation .nav-next,
 .posts-navigation .nav-next,
-.post-navigation .nav-next {
+.post-navigation .nav-next{
   float: right;
   text-align: right;
   width: 50%;
@@ -1032,24 +1029,21 @@ a:active {
 .clear:after,
 .entry-content:before,
 .entry-content:after,
-.comment-content:before,
-.comment-content:after,
 .site-header:before,
 .site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after{
   content: "";
   display: table;
   table-layout: fixed;
 }
 .clear:after,
 .entry-content:after,
-.comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after{
   clear: both;
 }
 .widget {
@@ -1086,12 +1080,8 @@ a:active {
 .archive .format-aside .entry-title {
   display: none;
 }
-.comment-content a {
-  word-wrap: break-word;
-}
-.bypostauthor {
-  display: block;
-}
+
+
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
   display: none;
@@ -1100,8 +1090,7 @@ a:active {
   display: block;
 }
 .page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
+.entry-content .wp-smiley{
   border: none;
   margin-bottom: 0;
   margin-top: 0;
@@ -1181,7 +1170,7 @@ object {
   padding-right: 10px;
 }
 .container:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -1190,7 +1179,7 @@ object {
   margin-right: -10px;
 }
 .row:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -1205,7 +1194,7 @@ object {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 .header-t {
@@ -1224,7 +1213,7 @@ object {
   font-weight: 400;
   margin: 0;
   font-family: "Niconne",cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Marck Script", cursive;
   color: #f6a8c6;
 }
 .site-branding .site-title a {
@@ -1246,7 +1235,7 @@ object {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-bottom.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 .banner img {
@@ -1269,8 +1258,8 @@ object {
 .banner .banner-text .text .title {
   font-size: 66px;
   line-height: 66px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   text-transform: none;
   font-weight: normal;
   margin: 0 0 15px;
@@ -1322,8 +1311,8 @@ object {
 }
 .intro .columns-2 .heading .main-title {
   font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   line-height: 62px;
   font-weight: normal;
   color: #f6a8c6;
@@ -1407,8 +1396,8 @@ object {
 .featured .header .main-title {
   font-size: 60px;
   line-height: 66px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   font-weight: normal;
   margin: 0;
 }
@@ -1443,15 +1432,15 @@ object {
   line-height: 28px;
 }
 .featured .lSPrev:before {
-  content: '\f104';
-  font-family: 'FontAwesome';
+  content: "";
+  font-family: "FontAwesome";
   color: #fff;
   font-size: 48px;
   margin-left: -36px;
 }
 .featured .lSNext:before {
-  content: '\f105';
-  font-family: 'FontAwesome';
+  content: "";
+  font-family: "FontAwesome";
   color: #fff;
   font-size: 48px;
   margin-right: -36px;
@@ -1472,8 +1461,8 @@ object {
 }
 .special .header .main-title {
   font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   line-height: 62px;
   font-weight: normal;
   color: #f6a8c6;
@@ -1585,7 +1574,7 @@ object {
   position: absolute;
   left: -43px;
   top: 0;
-  content: '';
+  content: "";
 }
 .special .info .btn-reserve:after {
   background: url(/wp-content/themes/bakes-and-cakes/images/bg-reserve-right.png) no-repeat;
@@ -1594,7 +1583,7 @@ object {
   position: absolute;
   right: -43px;
   top: 0;
-  content: '';
+  content: "";
 }
 .our-staff {
   padding: 70px 0;
@@ -1604,7 +1593,7 @@ object {
   position: relative;
 }
 .our-staff:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1624,8 +1613,8 @@ object {
 }
 .our-staff .header .main-title {
   font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   line-height: 62px;
   font-weight: normal;
   color: #fff;
@@ -1726,97 +1715,21 @@ object {
 .our-staff #carousel .flex-direction-nav .flex-next:hover {
   opacity: 1;
 }
-.testimonial {
-  padding: 70px 0;
-  background: #f7f6f4;
-}
-.testimonial .header {
-  text-align: center;
-  margin: 0 0 70px;
-}
-.testimonial .header .main-title {
-  font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
-  line-height: 62px;
-  font-weight: normal;
-  color: #f6a8c6;
-  margin: 0 0 10px;
-}
-.testimonial .header .sub-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #555;
-}
-.testimonial .tabset {
-  padding: 49px 0 0;
-  list-style: none;
-  border-top: 1px solid #dedddb;
-  height: inherit !important;
-}
-.tabset.lightSlider {
-  overflow: visible;
-}
-.testimonial .tabset li {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.testimonial .tabset li .active {
-  text-align: left;
-  display: block;
-  position: relative;
-}
-.testimonial .tabset li .active:before {
-  background: url(/wp-content/themes/bakes-and-cakes/images/arrow-down.png) no-repeat;
-  width: 49px;
-  height: 27px;
-  position: absolute;
-  content: '';
-  top: -50px;
-  left: 15px;
-}
-.testimonial .tabset li img {
-  border-radius: 50%;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  opacity: 0.5;
-}
-.testimonial .tabset li .active img {
-  opacity: 1;
-  float: left;
-}
-.testimonial .tabset li .text-holder {
-  display: none;
-  vertical-align: middle;
-}
-.testimonial .tabset li .active .text-holder {
-  display: inline-block;
-  float: right;
-  width: 125px;
-  font-size: 15px;
-  line-height: 17px;
-  margin-top: 0;
-  color: #555;
-}
-.testimonial .tabset li .active .text-holder .name {
-  display: block;
-  font-size: 18px;
-  font-size: 15px;
-  line-height: 17px;
-  margin: 0 0 5px;
-  color: #81c9c7;
-}
-.testimonial .tab-content {
-  text-align: center;
-  padding: 12px 100px 30px;
-  background: url(/wp-content/themes/bakes-and-cakes/images/bg-quote.png) no-repeat;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .blog-section {
   background: #fffdfe;
   padding: 70px 0;
@@ -1827,8 +1740,8 @@ object {
 }
 .blog-section .header .main-title {
   font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   line-height: 62px;
   font-weight: normal;
   color: #f6a8c6;
@@ -1892,87 +1805,18 @@ object {
   text-decoration: none;
   color: #81c9c7;
 }
-.promotional-block {
-  background-size: cover;
-  background-position: center;
-  padding: 104px 0;
-  position: relative;
-}
-.promotional-block:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-.promotional-block .container {
-  position: relative;
-}
-.promotional-block .header {
-  color: #fff;
-  max-width: 750px;
-  text-align: center;
-  margin: 0 auto 40px;
-}
-.promotional-block .main-title {
-  font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
-  line-height: 62px;
-  font-weight: normal;
-  color: #fff;
-  margin: 0 0 10px;
-  text-align: center;
-}
-.promotional-block .opening-info {
-  max-width: 320px;
-  margin: 0 auto 40px;
-  color: #fff;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-.promotional-block .opening-info .circle {
-  width: 46px;
-  height: 46px;
-  border: 1px solid #fff;
-  -webkit-border-radius: 100px;
-  border-radius: 50%;
-  float: left;
-  line-height: 42px;
-  text-align: center;
-  margin: 6px 10px 0 0;
-}
-.promotional-block .opening-info .time {
-  overflow: hidden;
-}
-.promotional-block .opening-info .time p {
-  margin: 0;
-}
-.promotional-block .btn-holder {
-  text-align: center;
-}
-.promotional-block .btn-join {
-  border: 2px solid #fff;
-  color: #fff;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  line-height: 20px;
-  padding: 11px 37px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.promotional-block .btn-join:hover {
-  text-decoration: none;
-  background: #fff;
-  color: #555;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 .btn-top {
   position: absolute;
   bottom: -36px;
@@ -1995,8 +1839,8 @@ object {
 }
 .btn-top span:before {
   display: inline-block;
-  font-family: 'FontAwesome';
-  content: '\f106';
+  font-family: "FontAwesome";
+  content: "";
   font-size: 20px;
   color: #000;
   position: absolute;
@@ -2025,8 +1869,8 @@ object {
 }
 .page-title {
   font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
+  font-family: "Niconne", cursive;
+  font-family: "Marck Script", cursive;
   line-height: 66px;
   font-weight: normal;
   color: #f6a8c6;
@@ -2064,8 +1908,8 @@ object {
 .content-area .post .entry-header h1.entry-title,
 .content-area .page .entry-header h1.entry-title {
   font-size: 56px;
-  font-family: 'Niconne',cursive;
-  font-family: 'Marck Script',cursive;
+  font-family: "Niconne",cursive;
+  font-family: "Marck Script",cursive;
   line-height: 60px;
   font-weight: normal;
   color: #f6a8c6;
@@ -2083,43 +1927,35 @@ object {
 }
 .content-area .post .entry-header .posted-on,
 .content-area .post .entry-header .byline,
-.content-area .post .entry-header .tags,
-.content-area .post .entry-header .entry-meta .comments-link {
+.content-area .post .entry-header .tags{
   margin-right: 37px;
 }
 .content-area .post .entry-header .entry-meta .posted-on a:before {
-  content: '\f133';
+  content: "";
   display: inline-block;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   font-size: 14px;
   vertical-align: top;
   margin-right: 8px;
 }
 .content-area .post .entry-header .entry-meta .byline a:before {
-  content: '\f007';
+  content: "";
   display: inline-block;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   font-size: 14px;
   vertical-align: top;
   margin-right: 8px;
 }
 .content-area .post .entry-header .entry-meta .tags:before {
-  content: '\f02b';
+  content: "";
   display: inline-block;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   font-size: 14px;
   vertical-align: top;
   margin-right: 8px;
   color: #81c9c7;
 }
-.content-area .post .entry-header .entry-meta .comments-link a:before {
-  content: '\f040';
-  display: inline-block;
-  font-family: 'FontAwesome';
-  font-size: 14px;
-  vertical-align: top;
-  margin-right: 8px;
-}
+
 .content-area .post .entry-header .entry-meta a:hover {
   text-decoration: none;
   color: #666;
@@ -2322,108 +2158,27 @@ object {
   background: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.comments-area {
-  padding: 0 33px 33px;
-}
-.comments-title,
-.comment-reply-title {
-  font-size: 24px;
-  color: #555;
-  margin: 0 0 32px;
-}
-.comment-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.comment-author img {
-  float: left;
-  width: 80px;
-  margin-right: 25px;
-  border-radius: 50px;
-  -webkit-border-radius: 100px;
-}
-.comment-author .says {
-  display: none;
-}
-.comment-metadata {
-  overflow: hidden;
-}
-.comment-metadata > a:before {
-  font-family: 'FontAwesome';
-  content: '\f133';
-  margin-right: 8px;
-  vertical-align: top;
-  font-size: 14px;
-}
-.comment-metadata a:hover {
-  text-decoration: none;
-  color: #666;
-}
-.comment-list .comment-content,
-.comment-list .reply {
-  margin-left: 106px;
-}
-.comment-list .comment-content {
-  margin-top: 5px;
-}
-.comment-list .comment-content p {
-  margin: 0 0 5px;
-}
-.comment-list .reply {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.comment-list .reply a {
-  color: #666;
-}
-.comment-list .reply a:hover {
-  color: #81c9c7;
-  text-decoration: none;
-}
-.comment-list .comment-body {
-  margin: 0 0 40px;
-}
-.comment-list .children {
-  list-style: none;
-  margin: 0 0 0 106px;
-  padding: 0;
-}
-.comment-form label {
-  display: none;
-}
-.comment-form input[type="text"],
-.comment-form input[type="email"],
-.comment-form input[type="url"] {
-  border: 1px solid #dddcda;
-  border-radius: 0;
-  padding: 10px 20px;
-  width: 70%;
-}
-.comment-form textarea {
-  border: 1px solid #dddcda;
-  border-radius: 0;
-  height: 106px;
-  padding: 10px 20px;
-  resize: none;
-  width: 100%;
-}
-.comment-form input[type="submit"] {
-  background: #81c9c7;
-  border: 0 none;
-  border-radius: 0;
-  box-shadow: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  height: 46px;
-  line-height: 46px;
-  padding: 0 25px;
-  text-shadow: none;
-}
-.comment-form input[type="submit"]:hover {
-  background: #74b5b3;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .full-width .content-area,
 .error .content-area,
 .search .content-area {
@@ -2666,8 +2421,8 @@ object {
 }
 .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta .posted-on a:before,
 .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta .posted-on a:before {
-  font-family: 'FontAwesome';
-  content: '\f133';
+  font-family: "FontAwesome";
+  content: "";
   font-size: 14px;
   vertical-align: top;
   margin-right: 8px;
@@ -2825,7 +2580,7 @@ object {
   left: 0;
   width: 100%;
   height: 9px;
-  content: '';
+  content: "";
   position: absolute;
 }
 .site-footer a {
@@ -2875,91 +2630,14 @@ object {
   text-decoration: none;
 }
 
-.site-footer .widget.widget_contact_form .form-holder {
-  background: #fff;
-  margin: -145px 40px 0;
-  padding: 47px 30px 20px;
-  position: relative;
-}
-.site-footer .widget.widget_contact_form .form-holder .main-title,
-.site-footer .widget.widget_contact_form .form-holder .widget-title {
-  font-size: 60px;
-  font-family: 'Niconne', cursive;
-  font-family: 'Marck Script', cursive;
-  line-height: 62px;
-  font-weight: normal;
-  color: #f6a8c6;
-  margin: 0 0 10px;
-  text-align: center;
-}
-.site-footer .widget.widget_contact_form .form-holder .sub-title {
-  color: #555;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 28px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 0 30px;
-}
-.site-footer .widget.widget_contact_form .form-holder .contact-form input[type="text"],
-.site-footer .widget.widget_contact_form .form-holder .contact-form input[type="email"],
-.site-footer .widget.widget_contact_form .form-holder .contact-form input[type="url"],
-.site-footer .widget.widget_contact_form .form-holder .contact-form input[type="tel"],
-.site-footer .widget .wpcf7-form input[type="text"],
-.site-footer .widget .wpcf7-form input[type="email"],
-.site-footer .widget .wpcf7-form input[type="url"],
-.site-footer .widget .wpcf7-form input[type="tel"] {
-  border: 1px solid #dddcda;
-  width: 100%;
-  font-size: 18px;
-  line-height: 22px;
-  border-radius: 0;
-  padding: 18px 22px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.site-footer .widget.widget_contact_form .form-holder .contact-form textarea,
-.site-footer .widget .wpcf7-form textarea {
-  border: 1px solid #dddcda;
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
-  line-height: 22px;
-  border-radius: 0;
-  padding: 18px 22px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  resize: none;
-}
-.site-footer .widget.widget_contact_form .form-holder .contact-form input[type="submit"],
-.site-footer .widget .wpcf7-form input[type="submit"] {
-  border: 2px solid #555;
-  color: #555;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  line-height: 20px;
-  padding: 11px 37px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.2s ease 0s;
-  -moz-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
-  background: none;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 0;
-}
-.site-footer .widget.widget_contact_form .form-holder .contact-form input[type="submit"]:hover,
-.site-footer .widget .wpcf7-form input[type="submit"]:hover {
-  background: #555;
-  color: #fff;
-}
-.site-footer .widget.widget_contact_form .form-holder .contact-form p:last-child {
-  text-align: center;
-}
+
+
+
+
+
+
+
+
 .site-footer .widget ul {
   margin: 0;
   padding: 0;
@@ -3035,20 +2713,10 @@ object {
   .our-staff #carousel .flex-direction-nav .flex-next {
     right: 17px;
   }
-  .testimonial .tabset li .active {
-    text-align: center;
-  }
-  .testimonial .tabset li .active img {
-    float: none;
-    display: inline-block;
-  }
-  .testimonial .tabset li .active .text-holder {
-    float: none;
-  }
-  .testimonial .tabset li .active:before {
-    left: 53px;
-    top: -50px;
-  }
+
+
+
+
   .banner .banner-text .text .title {
     font-size: 56px;
   }
@@ -3177,9 +2845,7 @@ object {
   .site-footer .widget ul li span {
     float: left;
   }
-  .testimonial .tabset li .active::before {
-    left: 38px;
-  }
+
   .content-area {
     width: 100%;
   }
@@ -3224,18 +2890,16 @@ object {
     bottom: 10px;
   }
   .intro,
-  .featured,
-  .special,
-  .testimonial,
-  .blog-section {
+.featured,
+.special,
+.blog-section{
     padding: 20px 0;
   }
   .our-staff {
     padding: 20px 0 50px;
   }
   .special .header,
-  .testimonial .header,
-  .blog-section .header {
+.blog-section .header{
     margin: 0 0 40px;
   }
   .special .special-post .img-holder {
@@ -3263,9 +2927,7 @@ object {
     overflow: hidden;
     top: 0;
   }
-  .testimonial .tab-content {
-    padding: 12px 10px 30px;
-  }
+
   .blog-section .post {
     width: 100%;
     margin-bottom: 20px;
@@ -3277,35 +2939,22 @@ object {
   .btn-top {
     left: 40%;
   }
-  .site-footer .widget,
-  .site-footer .widget.widget_contact_form {
+  .site-footer .widget{
     width: 100%;
   }
-  .site-footer .widget.widget_contact_form .form-holder {
-    margin: 0;
-    padding: 20px;
-  }
+
   .site-footer {
     padding-top: 36px;
   }
   .site-footer .site-info {
     padding-bottom: 36px;
   }
-  .testimonial .tabset li .active .text-holder {
-    display: block;
-    float: none;
-    width: 100%;
-  }
-  .testimonial .tabset li .active:before {
-    left: 17px;
-  }
-  .testimonial .tabset li .active {
-    text-align: left;
-  }
+
+
+
   .content-area .post .entry-header .posted-on,
-  .content-area .post .entry-header .byline,
-  .content-area .post .entry-header .tags,
-  .content-area .post .entry-header .entry-meta .comments-link {
+.content-area .post .entry-header .byline,
+.content-area .post .entry-header .tags{
     display: block;
     margin: 0 0 5px;
   }
@@ -3320,21 +2969,10 @@ object {
     font-size: 13px;
     line-height: 17px
   }
-  .comment-list .comment-content,
-  .comment-list .reply {
-    margin-left: 0;
-  }
-  .comment-author img {
-    margin-right: 10px;
-  }
-  .comment-list .children {
-    margin-left: 10px;
-  }
-  .comment-form input[type="text"],
-  .comment-form input[type="email"],
-  .comment-form input[type="url"] {
-    width: 100%;
-  }
+
+
+
+
   .search .search-form {
     width: 100%;
   }
@@ -3454,7 +3092,7 @@ ul.popuoargb li {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-2.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 999 @media only screen and (max-width: 767px) and (orientation: portrait) {
@@ -3477,7 +3115,7 @@ ul.popuoargb li {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/featured-bg-bottom.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 html {
@@ -3493,7 +3131,7 @@ html {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-3.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
   transform: rotate(180deg);
 }
@@ -3512,7 +3150,7 @@ html {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-4.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 .blue-container {
@@ -3529,7 +3167,7 @@ html {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-5.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 .green-container {
@@ -3547,7 +3185,7 @@ html {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-6.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 .yellow-container {
@@ -3565,7 +3203,7 @@ html {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-7.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 .purple-container {
@@ -3583,7 +3221,7 @@ html {
   width: 100%;
   background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-8.png) repeat-x;
   height: 9px;
-  content: '';
+  content: "";
   z-index: 11;
 }
 #staff.our-staff {
@@ -3608,14 +3246,14 @@ html {
   }
   .advantages__title {
     text-align: center;
-    font: 40px 'Marck Script', cursive;
+    font: 40px "Marck Script", cursive;
     text-shadow: 0 1px 1px #A0375F;
   }
   .intro .columns-2 .heading .main-title {
     font-size: 40px;
   }
   .staff__title {
-    font: 40px 'Marck Script', cursive!important;
+    font: 40px "Marck Script", cursive!important;
   }
 }
 .our-staff .container {
@@ -3623,12 +3261,12 @@ html {
 }
 .staff__title {
   text-align: center;
-  font: 50px 'Marck Script', cursive;
+  font: 50px "Marck Script", cursive;
   text-shadow: 0 1px 1px #233a4c;
   color: #697075;
 }
 .mark {
-  font: 35px/28px 'Marck Script', cursive;
+  font: 35px/28px "Marck Script", cursive;
   margin-right: 5px;
 }
 #page {
@@ -4054,7 +3692,7 @@ html {
 .sidr h4,
 .sidr h5,
 .sidr h6 {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
   background-image: -moz-linear-gradient(#ffffff, #dfdfdf);
@@ -4340,7 +3978,7 @@ html {
     width: 100%;
     background: url(/wp-content/themes/bakes-and-cakes/images/banner-bg-top-3-rosenfloris.png) repeat-x;
     height: 11px;
-    content: '';
+    content: "";
     z-index: 11;
     transform: none;
   }
@@ -4365,7 +4003,7 @@ html {
     width:310px;
     background:#fff;
     color:#555;
-    font-family:'Open Sans',sans-serif;
+    font-family:"Open Sans",sans-serif;
     font-size:16px;
     box-shadow:none;
   }
