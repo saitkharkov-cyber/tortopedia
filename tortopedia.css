@@ -1058,26 +1058,12 @@ a:active {
   margin: 1.5em 0 0;
 }
 
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none;
-}
 
 
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  display: none;
-}
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-.page-content .wp-smiley,
-.entry-content .wp-smiley{
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
+
+
+
+
 embed,
 iframe,
 object {
@@ -1926,26 +1912,11 @@ object {
   padding-left: 50px;
   background: url(/wp-content/themes/bakes-and-cakes/images/bg-quote.png) no-repeat 0 5px;
 }
-.content-area .post.format-quote .entry-content blockquote {
-  background: #5c595c url(/wp-content/themes/bakes-and-cakes/images/bg-quote2.png) no-repeat 40px 50px;
-  color: #fff;
-  font-size: 22px;
-  line-height: 36px;
-  font-style: normal;
-  padding: 44px 86px;
-}
-.content-area .post.format-quote .entry-content blockquote p {
-  margin: 0 0 10px;
-}
-.content-area .post.format-quote .entry-content blockquote cite {
-  font-size: 18px;
-  line-height: 34px;
-  font-weight: 700;
-  font-style: normal;
-}
+
+
+
 .content-area .post.format-status .entry-header .entry-title,
-.content-area .post.format-aside .entry-header .entry-title,
-.content-area .post.format-link .entry-header .entry-title {
+.content-area .post.format-link .entry-header .entry-title{
   display: none;
 }
 .pagination {
@@ -2704,10 +2675,7 @@ object {
     display: block;
     margin: 0 0 5px;
   }
-  .content-area .post.format-quote .entry-content blockquote {
-    padding: 30px 10px;
-    background-position: 10px 12px;
-  }
+
   #primary .post .entry-content table th,
   #primary .page .entry-content table th,
   #primary .post .entry-content table td,
