@@ -1101,15 +1101,8 @@ object {
   display: block;
   clear: both;
 }
-.row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-.row:after {
-  content: "";
-  display: block;
-  clear: both;
-}
+
+
 .site-header {
   background: #fdfdfd;
   position: relative;
@@ -1260,32 +1253,11 @@ object {
   width: 100%;
   vertical-align: top;
 }
-.intro .opening-time {
-  margin: 0 0 15px;
-}
-.intro .opening-time .circle {
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border: 1px solid #999;
-  border-radius: 50%;
-  -webkit-border-radius: 100px;
-  float: left;
-  margin-top: 8px;
-  margin-left: 23px;
-}
-.intro .opening-time .circle .fa {
-  font-size: 15px;
-  line-height: 40px;
-}
-.intro .opening-time .time {
-  overflow: hidden;
-  padding-left: 17px;
-}
-.intro .opening-time .time strong {
-  display: block;
-  color: #f6a8c6;
-}
+
+
+
+
+
 .intro .btn-holder {
   text-align: center;
   margin: 27px 0 0;
@@ -1334,30 +1306,11 @@ object {
   font-weight: 400;
   text-transform: uppercase;
 }
-.featured .featured-slider .img-holder {
-  overflow: hidden;
-  margin: 0 0 20px;
-}
-.featured .featured-slider li {
-  padding: 0 30px;
-}
-.featured .featured-slider .img-holder img {
-  border-radius: 50%;
-  border: 10px solid #fff;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
-}
-.featured .featured-slider .text-holder .name {
-  display: block;
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0 0 15px;
-}
-.featured .featured-slider .text-holder .price {
-  font-size: 24px;
-  line-height: 28px;
-}
+
+
+
+
+
 .featured .lSPrev:before {
   content: "";
   font-family: "FontAwesome";
@@ -1402,61 +1355,18 @@ object {
   text-transform: uppercase;
   color: #555;
 }
-.special .columns-8 {
-  width: 66.6667%;
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.special .special-post {
-  overflow: hidden;
-  border-bottom: 1px solid #e5e3e4;
-  padding: 0 0 44px;
-  margin: 0 0 44px;
-}
-.special .special-post:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-.special .special-post .img-holder {
-  float: left;
-  width: 255px;
-  height: 255px;
-}
-.special .special-post:nth-child(2n) .img-holder {
-  float: right;
-}
-.special .special-post .img-holder img {
-  vertical-align: top;
-  border-radius: 50%;
-  height: 100%;
-}
-.special .special-post .text-holder {
-  overflow: hidden;
-  padding: 38px 0 38px 45px;
-}
-.special .special-post:nth-child(2n) .text-holder {
-  padding: 38px 45px 38px 0;
-}
-.special .special-post .text-holder .title {
-  font-size: 18px;
-  line-height: 22px;
-  color: #555;
-}
-.special .special-post .text-holder .title a {
-  color: #555;
-}
-.special .special-post .text-holder .title a:hover {
-  color: #f6a8c6;
-  text-decoration: none;
-}
-.special .columns-4 {
-  float: left;
-  width: 33.3333%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 .special .info {
   float: right;
   background: url(/wp-content/themes/bakes-and-cakes/images/bg-info.png) no-repeat;
@@ -1483,35 +1393,9 @@ object {
   margin: 68px 0 84px;
   display: block;
 }
-.special .info .btn-reserve {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  background: #81c9c7;
-  display: inline-block;
-  padding: 16px 21px;
-  position: relative;
-}
-.special .info .btn-reserve:before {
-  background: url(/wp-content/themes/bakes-and-cakes/images/bg-reserve-left.png) no-repeat;
-  width: 60px;
-  height: 50px;
-  position: absolute;
-  left: -43px;
-  top: 0;
-  content: "";
-}
-.special .info .btn-reserve:after {
-  background: url(/wp-content/themes/bakes-and-cakes/images/bg-reserve-right.png) no-repeat;
-  width: 60px;
-  height: 50px;
-  position: absolute;
-  right: -43px;
-  top: 0;
-  content: "";
-}
+
+
+
 .our-staff {
   padding: 70px 0;
   background: url(/wp-content/themes/bakes-and-cakes/images/tarima-de-roble.jpg) no-repeat;
@@ -1584,9 +1468,7 @@ object {
   color: #555;
   margin: 0 0 15px;
 }
-.our-staff #staff-slider .flex-direction-nav {
-  display: none;
-}
+
 .our-staff #carousel {
   position: relative;
   top: -217px;
@@ -1620,28 +1502,6 @@ object {
   width: 325px;
   margin: 0 auto;
 }
-.our-staff #carousel .flex-direction-nav .flex-next {
-  background: url(/wp-content/themes/bakes-and-cakes/images/btn-next.png) no-repeat;
-  width: 36px;
-  height: 36px;
-  text-indent: 100%;
-  right: 85px;
-  opacity: 0.25;
-}
-.our-staff #carousel .flex-direction-nav .flex-prev {
-  background: url(/wp-content/themes/bakes-and-cakes/images/btn-prev.png) no-repeat;
-  width: 36px;
-  height: 36px;
-  text-indent: -9999px;
-  left: 85px;
-  opacity: 0.5;
-}
-.our-staff #carousel .flex-direction-nav .flex-prev:hover {
-  opacity: 1;
-}
-.our-staff #carousel .flex-direction-nav .flex-next:hover {
-  opacity: 1;
-}
 
 
 
@@ -1657,81 +1517,24 @@ object {
 
 
 
-.blog-section {
-  background: #fffdfe;
-  padding: 70px 0;
-}
-.blog-section .header {
-  text-align: center;
-  margin: 0 0 70px;
-}
-.blog-section .header .main-title {
-  font-size: 60px;
-  font-family: "Niconne", cursive;
-  font-family: "Marck Script", cursive;
-  line-height: 62px;
-  font-weight: normal;
-  color: #f6a8c6;
-  margin: 0 0 10px;
-}
-.blog-section .header .sub-title {
-  color: #555;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 28px;
-  text-transform: uppercase;
-}
-.blog-section .post {
-  float: left;
-  width: 25%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.blog-section .post img {
-  vertical-align: top;
-  width: 100%;
-}
-.blog-section .post .post-thumbnail {
-  display: block;
-  height: 100%;
-  max-height: 255px;
-  overflow: hidden;
-}
-.blog-section .post .text-holder {
-  padding: 29px;
-  background: #f7f6f4;
-}
-.blog-section .post .posted-on {
-  font-size: 18px;
-  line-height: 30px;
-  display: block;
-  margin: 0 0 15px;
-}
-.blog-section .post .entry-title {
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #666;
-  margin: 0 0 15px;
-}
-.blog-section .post .entry-title a {
-  color: #666;
-}
-.blog-section .post .entry-title a:hover {
-  color: #81c9c7;
-  text-decoration: none;
-}
-.blog-section .post .readmore {
-  font-size: 15px;
-  font-weight: 700;
-  color: #666;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-.blog-section .post .readmore:hover {
-  text-decoration: none;
-  color: #81c9c7;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2003,34 +1806,10 @@ object {
   line-height: 24px;
   margin: 0 0 18px;
 }
-#primary .post .entry-content .pull-right,
-#primary .page .entry-content .pull-right {
-  float: right;
-  width: 248px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  text-align: right;
-}
-#primary .post .entry-content .pull-left,
-#primary .page .entry-content .pull-left {
-  float: left;
-  width: 248px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-#primary .post .entry-content .dropcap,
-#primary .page .entry-content .dropcap {
-  font-size: 124px;
-  font-weight: 600;
-  float: left;
-  height: 100px;
-  line-height: 100px;
-  margin-right: 20px;
-}
-#primary .post .entry-content .highlight,
-#primary .page .entry-content .highlight {
-  background: #f9e2eb;
-}
+
+
+
+
 #primary .post .entry-content table,
 #primary .page .entry-content table {
   line-height: 30px;
@@ -2220,18 +1999,8 @@ object {
   text-decoration: none;
   color: #81c9c7;
 }
-#secondary .widget .social-networks {
-  margin: 0;
-  padding: 17px 21px 0;
-  list-style: none;
-  overflow: hidden;
-  font-size: 20px;
-}
-#secondary .widget .social-networks li {
-  float: left;
-  margin-right: 19px;
-  border-bottom: 0;
-}
+
+
 .widget.widget_search .widget-title {
   display: none;
 }
@@ -2341,30 +2110,14 @@ object {
   margin: 0 -3px;
   text-align: left;
 }
-.site-footer .col.center {
-  width: 50%;
-}
+
 .site-footer .widget.widget_contact_info span {
   display: block;
 }
-.site-footer .widget .social-networks {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  font-size: 20px;
-}
-.site-footer .widget .social-networks li {
-  float: left;
-  margin-right: 19px;
-}
-.site-footer .widget .social-networks li a {
-  color: #fff;
-}
-.site-footer .widget .social-networks li a:hover {
-  color: #c4c4c4;
-  text-decoration: none;
-}
+
+
+
+
 
 
 
@@ -2417,19 +2170,13 @@ object {
   .banner .banner-text {
     top: 4vw;
   }
-  .intro .opening-time .time {
-    padding-left: 7px;
-  }
+
   .our-staff #carousel {
     width: 463px;
     padding: 32px 60px;
   }
-  .our-staff #carousel .flex-direction-nav .flex-prev {
-    left: 17px;
-  }
-  .our-staff #carousel .flex-direction-nav .flex-next {
-    right: 17px;
-  }
+
+
 
 
 
@@ -2440,10 +2187,7 @@ object {
   .banner .banner-text .text {
     font-size: 22px;
   }
-  .blog-section .post .entry-title {
-    font-size: 18px;
-    line-height: 24px;
-  }
+
   .content-area {
     width: 66.6667%;
   }
@@ -2496,26 +2240,10 @@ object {
   .banner .banner-text .text .btn {
     padding: 5px 38px;
   }
-  .intro .opening-time {
-    width: 100%;
-    display: inline-block;
-    float: none;
-    text-align: center;
-  }
-  .intro .opening-time .circle {
-    float: none;
-    display: inline-block;
-  }
-  .intro .opening-time .time {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-  }
-  .special .columns-8,
-  .special .columns-4 {
-    width: 100%;
-    margin: 0 0 30px;
-  }
+
+
+
+
   .special .info {
     float: none;
     margin: 0 auto;
@@ -2531,34 +2259,16 @@ object {
     padding: 32px 20px;
     width: 397px;
   }
-  .our-staff #carousel .flex-direction-nav .flex-prev {
-    left: 0;
-  }
-  .our-staff #carousel .flex-direction-nav .flex-next {
-    right: 0;
-  }
+
+
   .our-staff {
     padding: 70px 0 0;
   }
-  .blog-section .post .entry-title {
-    font-size: 15px;
-    line-height: 18px;
-  }
-  .blog-section .post .readmore {
-    font-size: 13px;
-  }
-  .blog-section .post .posted-on {
-    font-size: 15px;
-    line-height: 18px;
-    margin: 0 0 10px;
-  }
-  .blog-section .post {
-    width: 50%;
-    margin-bottom: 20px;
-  }
-  .blog-section .post .text-holder {
-    padding: 10px;
-  }
+
+
+
+
+
   .site-footer .widget ul li span {
     float: left;
   }
@@ -2584,9 +2294,7 @@ object {
   .site-footer .col {
     width: 100%;
   }
-  .site-footer .col.center {
-    width: 100%;
-  }
+
   .banner .banner-text .text {
     width: 100%;
   }
@@ -2608,26 +2316,17 @@ object {
   }
   .intro,
 .featured,
-.special,
-.blog-section{
+.special{
     padding: 20px 0;
   }
   .our-staff {
     padding: 20px 0 50px;
   }
-  .special .header,
-.blog-section .header{
+  .special .header{
     margin: 0 0 40px;
   }
-  .special .special-post .img-holder {
-    width: 100%;
-    text-align: center;
-  }
-  .special .special-post .text-holder {
-    width: 100%;
-    padding: 20px 0 0;
-    max-height: 523px;
-  }
+
+
   .our-staff #staff-slider .img-holder {
     width: 100%;
   }
@@ -2645,14 +2344,8 @@ object {
     top: 0;
   }
 
-  .blog-section .post {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .blog-section .post .entry-title {
-    font-size: 18px;
-    line-height: 22px;
-  }
+
+
   .btn-top {
     left: 40%;
   }
@@ -3939,4 +3632,15 @@ html {
     font-size:30px;
     line-height:1.35;
   }
+}
+
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
 }
