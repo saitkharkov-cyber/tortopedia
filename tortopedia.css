@@ -2350,224 +2350,48 @@ object {
   padding: 0;
   margin: 7px 0 0;
 }
-.widget.widget_bakes_and_cakes_featured_post .holder {
-  padding: 22px;
-  border: 1px solid #e4e3e1;
-  border-top: 0;
-}
-.widget.widget_bakes_and_cakes_featured_post .img-holder {
-  margin: 0 0 20px;
-}
-.widget.widget_bakes_and_cakes_featured_post .img-holder img {
-  vertical-align: top;
-  width: 235px;
-  height: 235px;
-  border-radius: 50%;
-  -webkit-border-radius: 100px;
-  border: 8px solid #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
-}
-.widget.widget_bakes_and_cakes_featured_post p {
-  margin: 0 0 15px;
-}
-.widget.widget_bakes_and_cakes_featured_post .readmore {
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #666;
-}
-.widget.widget_bakes_and_cakes_featured_post .readmore:hover {
-  text-decoration: none;
-  color: #81c9c7;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .post-thumbnail,
-.widget.widget_bakes_and_cakes_popular_post ul li .post-thumbnail {
-  float: left;
-  width: 69px;
-  margin-right: 20px;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .post-thumbnail img,
-.widget.widget_bakes_and_cakes_popular_post ul li .post-thumbnail img {
-  vertical-align: top;
-  width: 100%;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header {
-  overflow: hidden;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #666;
-  margin: 0 0 4px;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title a,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title a {
-  color: #666;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title a:hover,
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title a:focus,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title a:hover,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title a:focus {
-  text-decoration: none;
-  color: #81c9c7;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta a,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta a {
-  color: #81c9c7;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta .posted-on a:before,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta .posted-on a:before {
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 14px;
-  vertical-align: top;
-  margin-right: 8px;
-}
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta a:hover,
-.widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta a:focus,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta a:hover,
-.widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta a:focus {
-  text-decoration: none;
-  color: #666;
-}
-.widget.widget_tag_cloud .tagcloud {
-  padding: 17px 21px;
-  border: 1px solid #e4e3e1;
-  border-top: 0;
-  overflow: hidden;
-}
-.widget.widget_tag_cloud .tagcloud a {
-  background: #edecea;
-  line-height: 36px;
-  float: left;
-  color: #666;
-  margin: 0 11px 11px 0;
-  padding: 0 23px;
-  border-radius: 25px;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.widget.widget_tag_cloud .tagcloud a:hover {
-  text-decoration: none;
-  background: #81c9c7;
-  color: #fff;
-}
-.widget.widget_calendar .calendar_wrap {
-  border: 1px solid #e4e3e1;
-  border-top: 0;
-  position: relative;
-}
-.widget.widget_calendar table {
-  margin: 0;
-}
-.widget.widget_calendar caption {
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #666;
-  font-weight: 700;
-  padding: 12px 0;
-}
-.widget.widget_calendar table thead th {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 3px 0;
-  text-align: center;
-}
-.widget.widget_calendar thead {
-  background: #fff;
-}
-.widget.widget_calendar table tbody td {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  font-weight: 600;
-  height: 34px;
-}
-.widget.widget_calendar table tbody td a {
-  background: #81c9c7;
-  color: #fff;
-  display: block;
-  height: 100%;
-  line-height: 35px;
-}
-.widget.widget_calendar tfoot #prev,
-.widget.widget_calendar tfoot #next {
-  position: absolute;
-  top: 18px;
-}
-.widget.widget_calendar tfoot #next {
-  right: 0;
-}
-.widget.widget_calendar tfoot tr {
-  width: 100%;
-}
-.widget.widget_calendar tfoot #prev a {
-  text-indent: -9999px;
-  background: url(/wp-content/themes/bakes-and-cakes/images/btn-prev-month.png) no-repeat;
-  width: 8px;
-  height: 12px;
-  float: left;
-  margin-left: 30px
-}
-.widget.widget_calendar tfoot #next a {
-  text-indent: -9999px;
-  background: url(/wp-content/themes/bakes-and-cakes/images/btn-next-month.png) no-repeat;
-  width: 8px;
-  height: 12px;
-  float: right;
-  margin-right: 30px;
-}
-#secondary .widget.widget_rss .widget-title a {
-  color: #555;
-}
-#secondary .widget.widget_rss .widget-title a:hover,
-#secondary .widget.widget_rss .widget-title a:focus {
-  text-decoration: none;
-  color: #81c9c7;
-}
-#secondary .widget.widget_rss ul li a {
-  color: #81c9c7;
-}
-#secondary .widget.widget_rss ul li a:hover,
-#secondary .widget.widget_rss ul li a:focus {
-  text-decoration: underline;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #secondary .widget.widget_text .textwidget {
   padding: 17px 21px;
   border: 1px solid #e4e3e1;
   border-top: 0;
 }
-.widget.widget_product_search .woocommerce-product-search {
-  background: #edecea;
-  border: 1px solid #e4e3e1;
-  overflow: hidden;
-  padding: 10px;
-  width: 100%;
-}
-.widget.widget_product_search .woocommerce-product-search input[type="search"] {
-  float: left;
-  width: 85%;
-  background: none;
-  border: 0;
-  padding: 3px;
-}
-.widget.widget_product_search .woocommerce-product-search input[type="submit"] {
-  background: url("/wp-content/themes/bakes-and-cakes/images/bg-search.png") no-repeat;
-  border: 0 none;
-  box-shadow: none;
-  float: right;
-  height: 18px;
-  margin: 7px 0 0;
-  padding: 0;
-  text-indent: -9999px;
-  width: 17px;
-}
+
+
+
 .site-footer {
   background: #5c595c;
   padding: 58px 0 0;
@@ -2647,36 +2471,17 @@ object {
   overflow: hidden;
   margin: 0 0 15px;
 }
-.site-footer .widget ul li a,
-.site-footer .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title a,
-.site-footer .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta a,
-.site-footer .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title a,
-.site-footer .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta a {
+.site-footer .widget ul li a{
   color: #c4c4c4;
 }
 .site-footer .widget ul li a:hover,
-.site-footer .widget ul li a:focus,
-.site-footer .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title a:hover,
-.site-footer .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta a:hover,
-.site-footer .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-title a:focus,
-.site-footer .widget.widget_bakes_and_cakes_recent_post ul li .entry-header .entry-meta a:focus,
-.site-footer .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title a:hover,
-.site-footer .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta a:hover,
-.site-footer .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-title a:focus,
-.site-footer .widget.widget_bakes_and_cakes_popular_post ul li .entry-header .entry-meta a:focus {
+.site-footer .widget ul li a:focus{
   text-decoration: none;
   color: #fff;
 }
-.site-footer .widget.widget_calendar .calendar_wrap {
-  background: #f7f6f4;
-}
-.site-footer .widget.widget_rss ul li a {
-  color: #fff;
-}
-.site-footer .widget.widget_rss ul li a:hover,
-.site-footer .widget.widget_rss ul li a:focus {
-  text-decoration: underline;
-}
+
+
+
 .site-footer .site-info {
   padding: 0 0 50px;
   text-align: left;
