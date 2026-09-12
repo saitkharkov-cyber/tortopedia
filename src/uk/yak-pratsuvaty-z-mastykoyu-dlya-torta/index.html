@@ -74,12 +74,34 @@ image_alt: "Розкачана мастика та інструменти для
 <p>Це орієнтир, а не сувора норма. Витрата залежить від товщини розкачування, висоти торта й того, який запас ви залишаєте по краях.</p>
 <p>Розмір самого пласта зручно розраховувати за простою формулою: <strong>діаметр торта + дві його висоти</strong>. Наприклад, для торта діаметром 20 см і висотою 10 см потрібен пласт щонайменше 40 см у діаметрі. Можна додати невеликий робочий запас, але робити його надмірно великим теж не варто.</p>
 <h2>Як розкачувати мастику</h2>
+<p><img class="aligncenter size-full" src="../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku-865.webp" srcset="../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku-480.webp 480w, ../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku-865.webp 865w, ../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku.webp 1536w" sizes="(max-width: 865px) 100vw, 865px" alt="Розкачана мастика для торта" width="1536" height="1024" loading="lazy" decoding="async" /></p>
 <p>Перед розкачуванням злегка припудріть робочу поверхню крохмалем або цукровою пудрою. Їх має бути зовсім небагато — лише щоб мастика не прилипала.</p>
+<video id="mastika-roll-video" autoplay muted loop playsinline preload="none" poster="/wp-content/uploads/2026/09/kak-raskatyvat-mastiku-865.webp">
+  <source data-src="/wp-content/uploads/2026/09/Loop-kak-raskatat-mastiku.mp4" type="video/mp4">
+</video>
+<script>
+const video = document.getElementById('mastika-roll-video');
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const source = video.querySelector('source[data-src]');
+    source.src = source.dataset.src;
+    source.removeAttribute('data-src');
+
+    video.load();
+    video.play().catch(() => {});
+    obs.unobserve(video);
+  });
+}, { rootMargin: '300px 0px' });
+
+observer.observe(video);
+</script>
 <p>Сформуйте з маси рівну кулю, трохи приплюсніть її долонею й починайте розкачувати від центру до країв.</p>
 <p>Періодично повертайте пласт. Так легше контролювати його форму й вчасно помітити, що мастика почала прилипати до поверхні.</p>
 <p>Намагайтеся натискати на качалку рівномірно. Якщо сильно тиснути лише в одному місці, одна частина пласта вийде надто тонкою, а інша залишиться товстою.</p>
 <p>Якщо ви готуєте мастику саме для покриття торта, докладніше про розкачування та розгладжування читайте у статті <a href="../kak-obtyanut-tort-mastikoi-bez-skladok/"><u>«Як покрити торт мастикою без складок»</u></a>.</p>
-<p><img class="aligncenter size-full" src="../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku-865.webp" srcset="../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku-480.webp 480w, ../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku-865.webp 865w, ../../wp-content/uploads/2026/09/kak-raskatyvat-mastiku.webp 1536w" sizes="(max-width: 865px) 100vw, 865px" alt="Розкачана мастика для торта" width="1536" height="1024" loading="lazy" decoding="async" /></p>
 <h2>Якої товщини має бути мастика</h2>
 <p>Для покриття торта зручний орієнтир — приблизно <strong>3 мм</strong>. Така товщина дає достатньо еластичний пласт, який ще зручно переносити та розгладжувати.</p>
 <p>Надто товстий шар виходить важким і грубим під час нарізання.</p>
