@@ -20,6 +20,8 @@ foreach ($file in $files) {
     Copy-Item $file.FullName $target -Force
 }
 
+Copy-Item (Join-Path $build "llms.txt") (Join-Path (Get-Location) "llms.txt") -Force
+
 Write-Host "Checking diff..."
 git diff --check
 if ($LASTEXITCODE -ne 0) { throw "git diff --check failed" }
