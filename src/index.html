@@ -105,6 +105,21 @@ active_page: home
 </div>
 </div>
 </section>
+<section class="special" id="latest-posts" tabindex="-1">
+<div class="container">
+<h2 class="advantages__title entry-title">Новые статьи</h2>
+<ul class="populargb">
+{% for post in collections.recentRu %}
+<li>
+<div class="mail">
+<img src="{{ post.data.image_src | replace: '../../', '/' | replace: '../', '/' }}" alt="{{ post.data.image_alt | default: post.data.title }}">
+</div>
+<a class="populargb__item-title" href="{{ post.url }}">{{ post.data.title }}</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</section>
 <section class="special" id="events" tabindex="-1"
 >
 <div class="container">
