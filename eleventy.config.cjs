@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
       .getAll()
       .filter(item => item.data.published && item.data.lang === lang)
       .sort((a, b) => new Date(b.data.published) - new Date(a.data.published))
-      .slice(0, 5);
+      .slice(0, 6);
   }
 
   eleventyConfig.addCollection("recentRu", collectionApi =>
