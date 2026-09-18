@@ -12,9 +12,9 @@
 {% if post_id == 645 %}{% include "partials/recipe-schema-marshmallow-uk.njk" %}{% endif %}
 <main id="main" class="site-main">
 {{ content | safe }}
-<nav class="navigation post-navigation" role="navigation">
+{% set autoNav = postNavigation | postNavigationFor(lang, page.url, collections.all) %}<nav class="navigation post-navigation" role="navigation">
 <h2 class="screen-reader-text">Post navigation</h2>
-<div class="nav-links">{% if prev_url %}<div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div>{% endif %}{% if next_url %}<div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div>{% endif %}</div>
+<div class="nav-links">{% if autoNav.prev %}<div class="nav-previous"><a href="{{ autoNav.prev.url }}" rel="prev">{{ autoNav.prev.title | safe }}</a></div>{% elif prev_url %}<div class="nav-previous"><a href="{{ prev_url }}" rel="prev">{{ prev_title | safe }}</a></div>{% endif %}{% if autoNav.next %}<div class="nav-next"><a href="{{ autoNav.next.url }}" rel="next">{{ autoNav.next.title | safe }}</a></div>{% elif next_url %}<div class="nav-next"><a href="{{ next_url }}" rel="next">{{ next_title | safe }}</a></div>{% endif %}</div>
 </nav>
 </main>
 </div>

@@ -15,6 +15,40 @@ module.exports = function (eleventyConfig) {
     recentArticles(collectionApi, "uk-UA")
   );
 
+  eleventyConfig.addFilter("postNavigationFor", function (navigation, lang, currentUrl, allPages) {
+    if (!navigation || !Array.isArray(allPages)) {
+      return {};
+    }
+
+    const chain = lang === "uk-UA" ? navigation.uk : navigation.ru;
+
+    if (!Array.isArray(chain)) {
+      return {};
+    }
+
+    const index = chain.indexOf(currentUrl);
+
+    if (index === -1) {
+      return {};
+    }
+
+    function getPage(url) {
+      return allPages.find(item => item.url === url);
+    }
+
+    const prevPage = index > 0 ? getPage(chain[index - 1]) : null;
+    const nextPage = index < chain.length - 1 ? getPage(chain[index + 1]) : null;
+
+    return {
+      prev: prevPage
+        ? { url: prevPage.url, title: prevPage.data.title }
+        : null,
+      next: nextPage
+        ? { url: nextPage.url, title: nextPage.data.title }
+        : null
+    };
+  });
+
   return {
     dir: {
       input: "src",
