@@ -21,6 +21,7 @@ foreach ($file in $files) {
 }
 
 Copy-Item (Join-Path $build "llms.txt") (Join-Path (Get-Location) "llms.txt") -Force
+Copy-Item (Join-Path $build "sitemap.xml") (Join-Path (Get-Location) "sitemap.xml") -Force
 
 Write-Host "Checking diff..."
 git diff --check
