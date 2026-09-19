@@ -15,6 +15,28 @@ module.exports = function (eleventyConfig) {
     recentArticles(collectionApi, "uk-UA")
   );
 
+  eleventyConfig.addFilter("categoryArticlesFor", function (allPages, categorySlug, lang) {
+    if (!Array.isArray(allPages)) {
+      return [];
+    }
+
+    return allPages
+      .filter(item =>
+        item.data.category_slug === categorySlug &&
+        item.data.lang === lang &&
+        item.data.published
+      )
+      .sort((a, b) => new Date(b.data.published) - new Date(a.data.published));
+  });
+
+  eleventyConfig.addFilter("rootImagePath", function (value) {
+    if (!value) {
+      return "";
+    }
+
+    return "/" + value.replace(/^(\.\.\/)+/, "");
+  });
+
   eleventyConfig.addFilter("postNavigationFor", function (navigation, lang, currentUrl, allPages) {
     if (!navigation || !Array.isArray(allPages)) {
       return {};

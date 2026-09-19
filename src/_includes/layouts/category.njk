@@ -8,6 +8,24 @@
 <div class="container"><div id="content" class="site-content"><div id="crumbs"><a href="../../">Главная</a> <span class="separator">&gt;</span> <span class="current">{{ title | safe }}</span></div>
 <div id="primary" class="content-area">
 <main id="main" class="site-main">
+<header class="page-header">
+<h1 class="page-title">{{ title | safe }}</h1>
+</header>
+{% set categoryArticles = collections.all | categoryArticlesFor(category_slug, lang) %}
+{% for item in categoryArticles %}
+<article id="post-{{ item.data.post_id }}" class="post-{{ item.data.post_id }} post type-post status-publish format-standard has-post-thumbnail hentry category-{{ category_slug }}">
+<a href="{{ item.url }}" class="post-thumbnail"><img width="{{ item.data.image_width }}" height="{{ item.data.image_height }}" src="{{ item.data.image_src | rootImagePath }}" class="attachment-bakes-and-cakes-image size-bakes-and-cakes-image wp-post-image" alt="{{ item.data.image_alt }}"></a>
+<div class="text-holder">
+<header class="entry-header">
+<h2 class="entry-title"><a href="{{ item.url }}" rel="bookmark">{{ item.data.title | safe }}</a></h2>
+</header>
+<div class="entry-content"></div>
+<footer class="entry-footer">
+<a href="{{ item.url }}" class="readmore">Читать далее</a>
+</footer>
+</div>
+</article>
+{% endfor %}
 {{ content | safe }}
 </main>
 </div>
