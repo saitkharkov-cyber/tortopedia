@@ -16,7 +16,7 @@
 Последний подтверждённый remote HEAD перед фиксацией состояния:
 
 ```text
-03e2617 Add text export of semantic core
+d294fc2 Remove obsolete Excel semantic core
 ```
 
 Последние важные commits:
@@ -70,13 +70,13 @@ RU и UA категории работают симметрично.
 Текущий использованный максимум:
 
 ```text
-1041
+1042
 ```
 
 Следующий новый материал:
 
 ```text
-1042
+1043
 ```
 
 ---
@@ -186,13 +186,15 @@ src/uk/html-sitemap/index.html
 
 ## 7. Семантическое ядро
 
-Старое семантическое ядро теперь хранится в репозитории:
+Рабочее семантическое ядро хранится в UTF-8 текстовом виде:
 
 ```text
-docs/TORTOPEDIA-Semanticheskoe-YADRO.xlsx
+docs/TORTOPEDIA-Semanticheskoe-YADRO.txt
 ```
 
-Не удалять его из Git. Использовать как один из основных источников при выборе следующих кластеров.
+Excel-версия удалена из репозитория как дублирующая и больше не используется.
+
+Текстовый файл собран из всех листов старого ядра, очищен от trailing whitespace и предназначен для поиска/анализа прямо из репозитория.
 
 ---
 
@@ -264,7 +266,7 @@ templateRender has not yet initialized
 Следующий этап — вернуться к выбору следующего самостоятельного контентного кластера через:
 
 docs/CONTENT_PLAN.md
-+ docs/TORTOPEDIA-Semanticheskoe-YADRO.xlsx
++ docs/TORTOPEDIA-Semanticheskoe-YADRO.txt
 + docs/CONTENT_MAP.md
 + опубликованные материалы
 + Keyword Planner / SERP при необходимости
@@ -440,13 +442,9 @@ cdd54d9 Update content map for men's cake cluster
 
 ### Семантическое ядро
 
-Старый Excel-файл сохранён без смысловых изменений:
+Excel-файл удалён из репозитория как дублирующий. Рабочий формат семантического ядра теперь один:
 
-```text
-docs/TORTOPEDIA-Semanticheskoe-YADRO.xlsx
-```
 
-Дополнительно создан удобный UTF-8 текстовый экспорт:
 
 ```text
 docs/TORTOPEDIA-Semanticheskoe-YADRO.txt
@@ -468,4 +466,19 @@ docs/TORTOPEDIA-Semanticheskoe-YADRO.txt
 - после 1043 — футбольный МК 1044;
 - затем — торт для рыбака 1045;
 - отдельный обзор CMC / Tylose / Gum-Tex / трагакант по-прежнему не развивать без нового самостоятельного интента;
-- фактический remote HEAD на завершение сессии: `03e2617`.
+- фактический remote HEAD на завершение сессии: `d294fc2`.
+
+
+### Финальное уточнение семантического ядра
+
+После создания UTF-8 экспорта Excel-версия была удалена из репозитория:
+
+```text
+d294fc2 Remove obsolete Excel semantic core
+```
+
+Итоговый единственный рабочий файл:
+
+```text
+docs/TORTOPEDIA-Semanticheskoe-YADRO.txt
+```
