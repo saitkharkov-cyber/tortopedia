@@ -11,6 +11,11 @@
 <header class="page-header">
 <h1 class="page-title">{{ title | safe }}</h1>
 </header>
+{%- if category_intro %}
+<div class="category-intro">
+{{ category_intro | safe }}
+</div>
+{% endif -%}
 {% set categoryArticles = collections.all | categoryArticlesFor(category_slug, lang) %}
 {% for item in categoryArticles %}
 <article id="post-{{ item.data.post_id }}" class="post-{{ item.data.post_id }} post type-post status-publish format-standard has-post-thumbnail hentry category-{{ category_slug }}">
