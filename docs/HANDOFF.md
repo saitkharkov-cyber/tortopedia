@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-Дата: 2026-09-22
+Дата: 2026-09-23
 
 ## 1. Проект
 
@@ -484,22 +484,103 @@ npm run build
 
 ## 14. Точка продолжения
 
-Следующая рабочая сессия:
+На 2026-09-23 материал 1044 полностью опубликован:
 
 ```text
-git pull
-→ git status --short && git log --oneline --decorate -7
-→ прочитать CURRENT_SESSION_STATE + HANDOFF + CONTENT_PLAN
-→ начать подготовку статьи 1044
-→ SERP / интент / каннибализация / семантика
-→ структура
-→ статья
+post_id: 1044
+RU: /tort-futbolnoe-pole/
+UA: /uk/tort-futbolne-pole/
+commit: b10e48c Add football field cake article
 ```
 
-Отдельные технические блоки, уже зафиксированные в плане и не забыть в дальнейшем:
+Финальная сборка Eleventy:
 
 ```text
-глоссарий терминов
+Wrote 74 files
+```
+
+Production-проверка обеих новых страниц: `200 OK`.
+
+XML sitemap содержит 72 URL и включает обе страницы 1044. В GSC на момент завершения сессии всё ещё отображается 70 URL — это проверить повторно после переобхода.
+
+`llms.txt` обновлён вручную через `src/llms.njk` и содержит RU/UA ссылки на 1044.
+
+Навигация 1043 ↔ 1044 настроена в обеих языковых версиях. Отдельно на следующей сессии добавить контекстную ссылку внутри текста UA-хаба:
+
+```text
+https://tortopedia.in.ua/uk/yak-prykrasyty-tort-dlya-cholovika/
+→
+https://tortopedia.in.ua/uk/tort-futbolne-pole/
+```
+
+### Первые задачи следующей сессии
+
+1. Выполнить `git pull`, потому что документация 2026-09-23 обновлена напрямую в GitHub после коммита `b10e48c`.
+2. Проверить:
+   ```powershell
+   git status --short && git log --oneline --decorate -7
+   ```
+3. В Google Search Console запросить переобход:
+   - `https://tortopedia.in.ua/tort-futbolnoe-pole/`
+   - `https://tortopedia.in.ua/uk/tort-futbolne-pole/`
+4. Повторно проверить/отправить `https://tortopedia.in.ua/sitemap.xml` и проконтролировать, когда GSC обновит число URL с 70 до 72.
+5. Добавить контекстную ссылку из UA-хаба 1043 на UA 1044.
+6. Затем выбрать один инфраструктурный блок, не смешивая всё сразу:
+   - Schema.org / JSON-LD;
+   - глоссарий терминов;
+   - Open Graph / social meta.
+7. Следующий контентный материал по текущему плану:
+   ```text
+   1045 — «Торт для рыбака»
+   ```
+   Перед написанием пройти начало `ARTICLE_PRODUCTION_REGULATION.md`: интент → каннибализация → SERP → структура.
+
+### Важный технический урок 1044
+
+Не хранить временные резервные HTML-файлы вроде `index-old.html` внутри `src/<slug>/`.
+
+Eleventy воспринимает их как самостоятельные страницы и может создать URL:
+
+```text
+/<slug>/index-old/
+```
+
+с последующим попаданием в XML sitemap.
+
+Для 1044 временные `index-old` были удалены и из source, и из production/staging. Финальный sitemap чистый.
+
+### Актуальный инфраструктурный backlog
+
+```text
 Schema.org / JSON-LD
+Глоссарий терминов
 Open Graph / social meta
 ```
+
+По глоссарию сохраняется ранее принятая архитектура: единый RU/UA источник терминов → короткие определения → подсказка на первом вхождении → общая страница-глоссарий.
+
+По structured data сохраняется план централизованной генерации `Article/BlogPosting`, `BreadcrumbList`, `WebSite` и ревизии старого Recipe-блока.
+
+По Open Graph сохраняется план централизованных OG/Twitter meta с RU/UA симметрией.
+
+Отдельный обзор `CMC / Tylose / Gum-Tex / трагакант` не развивать без подтверждённого самостоятельного интента.
+
+---
+
+## 15. Git-состояние после обновления документации
+
+Контентный commit 1044:
+
+```text
+b10e48c Add football field cake article
+```
+
+После него `docs/CURRENT_SESSION_STATE.md` и этот `HANDOFF.md` обновлены напрямую в GitHub.
+
+Поэтому локальный `main` пользователя после этих GitHub-обновлений будет отставать от `origin/main` до выполнения:
+
+```powershell
+git pull
+```
+
+Фактический Git всегда приоритетнее этой документации.
