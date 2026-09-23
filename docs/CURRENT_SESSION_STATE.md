@@ -1,6 +1,6 @@
 # Tortopedia — Current Session State
 
-Дата обновления: 2026-09-21
+Дата обновления: 2026-09-23
 
 ## Репозиторий
 
@@ -16,7 +16,7 @@
 Последний подтверждённый remote HEAD перед фиксацией состояния:
 
 ```text
-d294fc2 Remove obsolete Excel semantic core
+b10e48c Add football field cake article
 ```
 
 Последние важные commits:
@@ -758,3 +758,153 @@ CMC / Tylose / Gum-Tex / трагакант
 
 по-прежнему не развивать без подтверждённого самостоятельного интента.
 
+
+
+---
+
+## 15. Обновление состояния — 2026-09-23
+
+### Материал 1044 опубликован
+
+Завершён и опубликован второй материал мужского кластера:
+
+```text
+post_id: 1044
+RU: https://tortopedia.in.ua/tort-futbolnoe-pole/
+UA: https://tortopedia.in.ua/uk/tort-futbolne-pole/
+```
+
+H1:
+
+```text
+RU: Торт «Футбольное поле»: как сделать своими руками
+UA: Торт «Футбольне поле»: як зробити своїми руками
+```
+
+Материал — самостоятельный пошаговый МК, связанный с общим хабом 1043:
+
+```text
+RU: /kak-ukrasit-tort-dlya-muzhchiny/
+UA: /uk/yak-prykrasyty-tort-dlya-cholovika/
+```
+
+В статье два варианта оформления:
+- без мастики: зелёный крем, кремовая разметка, съедобные ворота, шоколадный мяч;
+- с мастикой: зелёное покрытие, белая разметка, ворота, мяч и упрощённые бутсы из мастики.
+
+Добавлено 14 визуальных сюжетов. Для изображений подготовлены responsive WebP 480 / 865 / 1200 / original; всего 57 WebP-файлов.
+
+### Перелинковка
+
+Навигация 1043 ↔ 1044 настроена симметрично в RU/UA:
+
+- у 1044 `prev` ведёт на 1043;
+- в 1043 добавлен `next` на 1044.
+
+На следующий рабочий день отдельно добавить контекстную ссылку внутри текста UA-хаба:
+
+```text
+https://tortopedia.in.ua/uk/yak-prykrasyty-tort-dlya-cholovika/
+→
+https://tortopedia.in.ua/uk/tort-futbolne-pole/
+```
+
+Ссылку встроить естественно в тематический абзац, не отдельным блоком «Читайте также».
+
+### Категория / sitemap / llms
+
+1044 относится к:
+
+```text
+category_slug: idei-i-vdohnovenie
+RU: /category/idei-i-vdohnovenie/
+UA: /uk/category/idei-ta-nathnennya/
+```
+
+Карточки категории формируются автоматически.
+
+HTML sitemap обновлён вручную в исходниках:
+
+```text
+src/html-sitemap/index.html
+src/uk/html-sitemap/index.html
+```
+
+XML sitemap формируется автоматически. После публикации 1044 локальный production `sitemap.xml` содержит 72 URL и включает обе новые страницы.
+
+Google Search Console на момент завершения сессии всё ещё показывает 70 URL. Это считать ожидаемым запаздыванием обработки, пока сам production sitemap содержит 72 URL.
+
+`llms.txt` ведётся вручную через `src/llms.njk`. В него добавлены RU и UA ссылки на 1044.
+
+### Техническая проблема index-old
+
+Во время работы временные файлы:
+
+```text
+src/tort-futbolnoe-pole/index-old.html
+src/uk/tort-futbolne-pole/index-old.html
+```
+
+были подхвачены Eleventy как отдельные страницы и временно попали в sitemap как `index-old/`.
+
+Оба source-файла удалены. Также удалены случайно попавшие в staging production-папки:
+
+```text
+tort-futbolnoe-pole/index-old/
+uk/tort-futbolne-pole/index-old/
+```
+
+Финальный sitemap содержит только правильные URL.
+
+### Build / publish / Git
+
+Финальная сборка:
+
+```text
+[11ty] Wrote 74 files
+```
+
+`publish.ps1` завершён успешно:
+
+```text
+Stale production HTML: 0
+llms.txt copied
+sitemap.xml актуален
+```
+
+Перед commit:
+- `git diff --check` — чисто;
+- `git diff --cached --check` — чисто;
+- staged diff проверен;
+- временный `MANIFEST.txt` удалён.
+
+Основной commit:
+
+```text
+b10e48c Add football field cake article
+```
+
+После push:
+
+```text
+b10e48c (HEAD -> main, origin/main, origin/HEAD) Add football field cake article
+```
+
+На момент проверки обе новые production-страницы отвечали `200 OK`.
+
+### Задачи на следующий рабочий день
+
+1. В Google Search Console запросить переобход:
+   - `https://tortopedia.in.ua/tort-futbolnoe-pole/`
+   - `https://tortopedia.in.ua/uk/tort-futbolne-pole/`
+2. Повторно проверить/отправить `https://tortopedia.in.ua/sitemap.xml` и проконтролировать переход GSC с 70 на 72 URL.
+3. Добавить контекстную ссылку из UA-хаба 1043 на UA-статью 1044.
+4. После этого вернуться к инфраструктурному backlog:
+   - Schema.org / JSON-LD;
+   - глоссарий терминов;
+   - Open Graph / social meta.
+5. Следующий контентный материал мужского кластера:
+   `1045 — «Торт для рыбака»`.
+   Перед написанием снова пройти начальные этапы `ARTICLE_PRODUCTION_REGULATION.md`: интент → каннибализация → SERP → структура.
+
+Отдельный обзор `CMC / Tylose / Gum-Tex / трагакант` по-прежнему не развивать без подтверждённого самостоятельного интента.
