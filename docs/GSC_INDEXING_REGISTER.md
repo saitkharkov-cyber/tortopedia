@@ -110,6 +110,34 @@ https://tortopedia.in.ua/uk/mastika-dlya-liplennya-figurok/
 и обе остались вне индекса при отсутствии видимых технических блокировок
 ```
 
+
+### UA — сушіння фігурок з мастики
+
+```text
+https://tortopedia.in.ua/uk/yak-sushyty-fihurky-z-mastyky/
+```
+
+На 2026-09-25:
+
+- статус GSC: `Просканировано — сейчас не проиндексировано`;
+- последнее сканирование в индексе GSC: `2026-09-21 14:57:30`;
+- Googlebot: для смартфонов;
+- сканирование разрешено: да;
+- загрузка страницы: успешно;
+- индексирование разрешено: да;
+- обнаружена через `https://tortopedia.in.ua/sitemap.xml`;
+- GSC также показывает внутреннюю ссылку с RU-страницы `https://tortopedia.in.ua/kak-sushit-figurki-iz-mastiki/`;
+- canonical пользователя: `https://tortopedia.in.ua/uk/yak-sushyty-fihurky-z-mastyky/`;
+- Google не показывает другой canonical;
+- Live Test выполнен `2026-09-25 16:04:13`;
+- Live Test: страницу можно проиндексировать;
+- сканирование в Live Test разрешено;
+- загрузка в Live Test успешна;
+- индексирование в Live Test разрешено;
+- canonical пользователя в Live Test корректный;
+- canonical Google в Live Test определяется только после индексации;
+- технического запрета через robots/noindex/HTTP/canonical по текущей проверке не выявлено.
+
 ## 4. Правило работы
 
 Не делать массовые изменения сайта по этому списку.
