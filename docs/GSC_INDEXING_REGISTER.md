@@ -110,6 +110,8 @@ https://tortopedia.in.ua/uk/mastika-dlya-liplennya-figurok/
 - canonical пользователя в Live Test: `https://tortopedia.in.ua/uk/mastika-dlya-liplennya-figurok/`;
 - canonical Google в Live Test определяется только после индексации;
 - технического запрета через robots/noindex/HTTP/canonical по текущей проверке не выявлено.
+- запрос на индексирование отправлен: `2026-09-25`;
+- повторно не отправлять без нового сигнала от GSC.
 
 Рабочее наблюдение по паре RU/UA:
 
