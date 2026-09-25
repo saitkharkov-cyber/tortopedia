@@ -243,8 +243,10 @@ https://tortopedia.in.ua/uk/kak-ukrasit-tort-na-novyi-god-v-domashnih-usloviyah/
 - индексирование разрешено: да;
 - обнаружена через `https://tortopedia.in.ua/sitemap.xml`;
 - GSC показывает несколько ссылающихся страниц, включая RU-версию, старый `/index/` URL и материал про окрашивание мастики;
-- canonical пользователя / canonical Google на предоставленном скриншоте индекса не видны, поэтому не фиксируются как подтверждённые;
-- Live Test выполнен `2026-09-25 16:31`;
+- canonical пользователя в Live Test: `https://tortopedia.in.ua/uk/kak-ukrasit-tort-na-novyi-god-v-domashnih-usloviyah/`;
+- canonical Google в Live Test: определяется только после индексации;
+- Live Test выполнен `2026-09-25 16:31:04`;
+- Live Test уточнён по дополнительному экрану: indexability = да, canonical пользователя корректный;
 - Live Test: Google имеет доступ к URL, страницу можно проиндексировать;
 - страница успешно отрисовывается в Google Inspection Tool;
 - технического запрета через robots/noindex/HTTP по текущей проверке не выявлено;
