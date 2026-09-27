@@ -29,6 +29,41 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => new Date(b.data.published) - new Date(a.data.published));
   });
 
+  eleventyConfig.addFilter("listingLastmod", function (allPages, pageUrl, pageData) {
+    if (!Array.isArray(allPages) || !pageData) {
+      return null;
+    }
+
+    let items = [];
+
+    if (pageUrl === "/" || pageUrl === "/uk/") {
+      items = allPages
+        .filter(item => item.data.published && item.data.lang === pageData.lang)
+        .sort((a, b) => new Date(b.data.published) - new Date(a.data.published))
+        .slice(0, 6);
+    } else if (pageData.category_slug) {
+      items = allPages
+        .filter(item =>
+          item.data.category_slug === pageData.category_slug &&
+          item.data.lang === pageData.lang &&
+          item.data.published
+        );
+    } else {
+      return null;
+    }
+
+    const dates = items
+      .map(item => item.data.updated || item.data.published)
+      .map(value => value instanceof Date ? value : new Date(value))
+      .filter(date => !Number.isNaN(date.getTime()));
+
+    if (!dates.length) {
+      return null;
+    }
+
+    return new Date(Math.max(...dates.map(date => date.getTime())));
+  });
+
   eleventyConfig.addFilter("rootImagePath", function (value) {
     if (!value) {
       return "";
