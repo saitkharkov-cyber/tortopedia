@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
         .filter(item => item.data.published && item.data.lang === pageData.lang)
         .sort((a, b) => new Date(b.data.published) - new Date(a.data.published))
         .slice(0, 6);
-    } else if (pageData.category_slug) {
+    } else if (pageUrl.includes("/category/") && pageData.category_slug) {
       items = allPages
         .filter(item =>
           item.data.category_slug === pageData.category_slug &&
