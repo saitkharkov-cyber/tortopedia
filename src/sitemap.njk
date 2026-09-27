@@ -12,6 +12,11 @@ eleventyExcludeFromCollections: true
     <lastmod>{{ item.data.updated | sitemapDate }}</lastmod>
 {%- elif item.data.published %}
     <lastmod>{{ item.data.published | sitemapDate }}</lastmod>
+{%- else %}
+{%- set listingLastmod = collections.all | listingLastmod(item.url, item.data) %}
+{%- if listingLastmod %}
+    <lastmod>{{ listingLastmod | sitemapDate }}</lastmod>
+{%- endif %}
 {%- endif %}
   </url>
 {%- endif %}
