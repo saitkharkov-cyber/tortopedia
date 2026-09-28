@@ -1,0 +1,18 @@
+{% set socialTitle = seo_title or title %}
+{% set socialLocale = "uk_UA" if lang == "uk-UA" else "ru_UA" %}
+{% set socialType = "article" if layout == "layouts/article.njk" or layout == "layouts/article-uk.njk" else "website" %}
+{% set socialImage = image_src | absoluteUrl if image_src else "https://tortopedia.in.ua/wp-content/uploads/2026/09/tortopedia-og-default.webp" %}
+{% set socialImageWidth = image_width if image_src else 1200 %}
+{% set socialImageHeight = image_height if image_src else 630 %}
+{% set socialImageAlt = image_alt if image_src and image_alt else "Tortopedia" %}
+<meta property="og:locale" content="{{ socialLocale }}">
+<meta property="og:type" content="{{ socialType }}">
+{% if socialTitle %}<meta property="og:title" content="{{ socialTitle | safe }}">{% endif %}
+{% if seo_description %}<meta property="og:description" content="{{ seo_description | safe }}">{% endif %}
+{% if canonical %}<meta property="og:url" content="{{ canonical }}">{% endif %}
+<meta property="og:site_name" content="Tortopedia">
+<meta property="og:image" content="{{ socialImage }}"><meta property="og:image:width" content="{{ socialImageWidth }}"><meta property="og:image:height" content="{{ socialImageHeight }}"><meta property="og:image:alt" content="{{ socialImageAlt | safe }}">
+<meta name="twitter:card" content="{{ 'summary_large_image' if socialImage else 'summary' }}">
+{% if socialTitle %}<meta name="twitter:title" content="{{ socialTitle | safe }}">{% endif %}
+{% if seo_description %}<meta name="twitter:description" content="{{ seo_description | safe }}">{% endif %}
+{% if socialImage %}<meta name="twitter:image" content="{{ socialImage }}">{% endif %}

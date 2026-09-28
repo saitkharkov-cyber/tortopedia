@@ -957,7 +957,7 @@ Commit: `c34f8c9 Add structured data and clean category listings`. Commit отп
 
 Structured Data / Schema.org считать завершённым инфраструктурным этапом.
 
-Следующая техническая задача по `docs/CONTENT_PLAN.md` — `Open Graph / social meta`: централизованная генерация через общий `head`, RU/UA-симметрия и безопасные fallback для страниц без hero-изображения.
+`Open Graph / social meta` также завершён 2026-09-28: централизованная генерация реализована через `src/_includes/partials/social-meta.njk`, подключённый из общего `head.njk`; RU/UA формируются симметрично, для страниц без собственного изображения используется fallback `tortopedia-og-default.webp` 1200×630. После publish проверены все 72 production HTML: `og:title`, `og:url` и `og:image` присутствуют ровно по одному, дублей и пустых значений нет.
 
 Глоссарий остаётся инфраструктурным направлением, но должен развиваться вслед за основным контентом, а не как отдельный SEO-проект.
 

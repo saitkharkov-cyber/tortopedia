@@ -469,11 +469,13 @@ Legacy Recipe Microdata удалён. Неподтверждённые `aggregat
 
 Основной commit: `c34f8c9 Add structured data and clean category listings`.
 
-Structured Data считать завершённой инфраструктурной задачей. Следующая техническая задача — `Open Graph / social meta`.
+Structured Data считать завершённой инфраструктурной задачей. `Open Graph / social meta` реализован 2026-09-28; результат зафиксирован ниже.
 
 ---
 
 ## Open Graph и social meta
+
+**Статус: реализовано 2026-09-28.** Централизованный слой добавлен через `src/_includes/partials/social-meta.njk` и подключён из общего `head.njk`. Для материалов используется собственное `image_src`, для страниц без изображения — общий fallback `/wp-content/uploads/2026/09/tortopedia-og-default.webp` размером 1200×630. RU/UA формируются симметрично. После `publish.ps1` проверены все 72 production HTML: на каждой странице ровно по одному `og:title`, `og:url` и `og:image`; ошибок и дублей нет.
 
 Для корректных превью материалов Tortopedia в Facebook, мессенджерах и других соцсетях добавить централизованный social-meta слой в общий `head`.
 
