@@ -1,0 +1,57 @@
+{% if layout == "layouts/home.njk" or layout == "layouts/home-uk.njk" %}
+{% set websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Tortopedia",
+  "url": canonical,
+  "inLanguage": lang
+} %}
+<script type="application/ld+json">{{ websiteSchema | jsonLd | safe }}</script>
+{% elif layout == "layouts/category.njk" or layout == "layouts/category-uk.njk" %}
+{% set homeUrl = "https://tortopedia.in.ua/uk/" if lang == "uk-UA" else "https://tortopedia.in.ua/" %}
+{% set homeName = "Головна" if lang == "uk-UA" else "Главная" %}
+{% set breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": homeName, "item": homeUrl },
+    { "@type": "ListItem", "position": 2, "name": title, "item": canonical }
+  ]
+} %}
+<script type="application/ld+json">{{ breadcrumbSchema | jsonLd | safe }}</script>
+{% elif layout == "layouts/article.njk" or layout == "layouts/article-uk.njk" %}
+{% set articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": seo_description,
+  "image": image_src | absoluteUrl,
+  "datePublished": published | sitemapDate,
+  "inLanguage": lang,
+  "mainEntityOfPage": canonical
+} %}
+<script type="application/ld+json">{{ articleSchema | jsonLd | safe }}</script>
+{% if post_id == 645 %}
+{% if lang == "uk-UA" %}
+{% set recipeIngredients = ["1 упаковка ніжних повітряних зефіринок (найчастіше 90 грам)", "1 склянка цукрової пудри", "½ склянки картопляного або кукурудзяного крохмалю", "1 ст. ложка молока або лимонного соку", "1 ч.л. вершкового масла", "за бажанням харчовий барвник (сухий або гелевий)"] %}
+{% set recipeInstructions = [{ "@type": "HowToStep", "name": "Просіювання", "text": "Просійте за допомогою сита або органзи всі великі крупинки з сипучих компонентів." }, { "@type": "HowToStep", "name": "Розтоплення маршмелоу", "text": "Розтопіть маршмелоу з 1 чайною ложкою вершкового масла в мікрохвильовій печі приблизно 40 секунд або на водяній бані близько 15 хвилин, безперервно помішуючи." }, { "@type": "HowToStep", "name": "Замішування мастики", "text": "Додайте столову ложку молока або лимонного соку, перемішайте та за бажанням додайте харчовий барвник. Поступово введіть просіяний крохмаль і цукрову пудру до пластичності. Після охолодження вимісіть руками." }] %}
+{% else %}
+{% set recipeIngredients = ["1 упаковка нежных воздушных зефиринок (зачастую 90 грамм)", "1 стакан сахарной пудры", "½ стакана картофельного или кукурузного крахмала", "1 ст. ложка молока или лимонного сока", "1 ч. л. сливочного масла", "по желанию пищевой краситель (сухой или гелевый)"] %}
+{% set recipeInstructions = [{ "@type": "HowToStep", "name": "Просеивание", "text": "Просейте посредством ситечка или органзы все крупные крупинки из сыпучих компонентов." }, { "@type": "HowToStep", "name": "Растапливание маршмеллоу", "text": "Растопите маршмеллоу с 1 чайной ложкой сливочного масла в микроволновой печи примерно 40 секунд или на водяной бане около 15 минут, непрерывно помешивая." }, { "@type": "HowToStep", "name": "Замешивание мастики", "text": "Добавьте столовую ложку молока или лимонного сока, перемешайте и по желанию добавьте пищевой краситель. Постепенно введите просеянный крахмал и сахарную пудру до пластичности. После остывания вымесите руками." }] %}
+{% endif %}
+{% set recipeSchema = { "@context": "https://schema.org", "@type": "Recipe", "name": title, "description": seo_description, "image": image_src | absoluteUrl, "datePublished": published | sitemapDate, "inLanguage": lang, "mainEntityOfPage": canonical, "author": { "@type": "Organization", "name": "Tortopedia" }, "recipeIngredient": recipeIngredients, "recipeInstructions": recipeInstructions } %}
+<script type="application/ld+json">{{ recipeSchema | jsonLd | safe }}</script>
+{% endif %}
+{% set homeUrl = "https://tortopedia.in.ua/uk/" if lang == "uk-UA" else "https://tortopedia.in.ua/" %}
+{% set homeName = "Головна" if lang == "uk-UA" else "Главная" %}
+{% set breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": homeName, "item": homeUrl },
+    { "@type": "ListItem", "position": 2, "name": category_title, "item": (category_url | resolveUrl(canonical)) if category_url else (category_slug | categoryUrl(lang)) },
+    { "@type": "ListItem", "position": 3, "name": title, "item": canonical }
+  ]
+} %}
+<script type="application/ld+json">{{ breadcrumbSchema | jsonLd | safe }}</script>
+{% endif %}

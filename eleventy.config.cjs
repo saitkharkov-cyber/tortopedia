@@ -106,6 +106,34 @@ module.exports = function (eleventyConfig) {
     };
   });
 
+  eleventyConfig.addFilter("categoryUrl", function (slug, lang) {
+    const urls = {
+      "idei-i-vdohnovenie": lang === "uk-UA" ? "https://tortopedia.in.ua/uk/category/idei-ta-nathnennya/" : "https://tortopedia.in.ua/category/idei-i-vdohnovenie/",
+      "uroki-lepki": lang === "uk-UA" ? "https://tortopedia.in.ua/uk/category/uroki-lepki/" : "https://tortopedia.in.ua/category/uroki-lepki/",
+      "vse-o-mastike": lang === "uk-UA" ? "https://tortopedia.in.ua/uk/category/vse-o-mastike/" : "https://tortopedia.in.ua/category/vse-o-mastike/"
+    };
+    return urls[slug] || "";
+  });
+
+  eleventyConfig.addFilter("resolveUrl", function (value, base) {
+    if (!value || !base) return "";
+    return new URL(value, base).href;
+  });
+
+  eleventyConfig.addFilter("absoluteUrl", function (value) {
+    if (!value) return "";
+    if (/^https?:\/\//i.test(value)) return value;
+    const rootPath = "/" + value.replace(/^(?:\.\.\/)+/, "").replace(/^\/+/, "");
+    return "https://tortopedia.in.ua" + rootPath;
+  });
+
+  eleventyConfig.addFilter("jsonLd", function (value) {
+    return JSON.stringify(value)
+      .replace(/</g, "\\u003c")
+      .replace(/>/g, "\\u003e")
+      .replace(/&/g, "\\u0026");
+  });
+
   eleventyConfig.addFilter("sitemapDate", function (value) {
     if (!value) {
       return "";
