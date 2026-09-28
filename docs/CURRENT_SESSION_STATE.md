@@ -957,7 +957,7 @@ Commit: `c34f8c9 Add structured data and clean category listings`. Commit отп
 
 Structured Data / Schema.org считать завершённым инфраструктурным этапом.
 
-`Open Graph / social meta` также завершён 2026-09-28: централизованная генерация реализована через `src/_includes/partials/social-meta.njk`, подключённый из общего `head.njk`; RU/UA формируются симметрично, для страниц без собственного изображения используется fallback `tortopedia-og-default.webp` 1200×630. После publish проверены все 72 production HTML: `og:title`, `og:url` и `og:image` присутствуют ровно по одному, дублей и пустых значений нет.
+`Open Graph / social meta` также завершён 2026-09-28: централизованная генерация реализована через `src/_includes/partials/social-meta.njk`, подключённый из общего `head.njk`; RU/UA формируются симметрично, для страниц без собственного изображения используется fallback `tortopedia-og-default.webp` 1200×630. После publish проверены все 72 production HTML: `og:title`, `og:url` и `og:image` присутствуют ровно по одному, дублей и пустых значений нет. Дополнительно выполнена внешняя проверка RU-статьи 1044 через Meta Sharing Debugger: crawler получил HTTP 200, корректные canonical/Open Graph/Twitter meta и собственное изображение статьи; preview сформирован правильно. Предупреждение об отсутствии `fb:app_id` относится к Facebook-монетизации и для текущей задачи не требует изменений.
 
 Глоссарий остаётся инфраструктурным направлением, но должен развиваться вслед за основным контентом, а не как отдельный SEO-проект.
 
