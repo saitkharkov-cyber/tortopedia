@@ -1,6 +1,6 @@
 # Tortopedia — Current Session State
 
-Дата обновления: 2026-09-23
+Дата обновления: 2026-09-28
 
 ## Репозиторий
 
@@ -16,17 +16,17 @@
 Последний подтверждённый remote HEAD перед фиксацией состояния:
 
 ```text
-b10e48c Add football field cake article
+c34f8c9 Add structured data and clean category listings
 ```
 
 Последние важные commits:
 
 ```text
-2fef2fa Automate category listings and document post ID rules
-a239874 Fix duplicate category cards and localize read more links
-0c8158a Add fondant modeling guide in Russian and Ukrainian
-083735e Move fondant modeling guide to mastika category
-2eed299 Add modeling guide to HTML sitemaps
+c34f8c9 Add structured data and clean category listings
+e61db84 Add published dates to legacy articles
+3891734 Document category cross-linking strategy
+9884467 Add category linking rules to article workflow
+60ff2e9 Document internal linking architecture
 ```
 
 Фактическое состояние Git всегда приоритетнее документации.
@@ -906,5 +906,61 @@ b10e48c (HEAD -> main, origin/main, origin/HEAD) Add football field cake article
 5. Следующий контентный материал мужского кластера:
    `1045 — «Торт для рыбака»`.
    Перед написанием снова пройти начальные этапы `ARTICLE_PRODUCTION_REGULATION.md`: интент → каннибализация → SERP → структура.
+
+Отдельный обзор `CMC / Tylose / Gum-Tex / трагакант` по-прежнему не развивать без подтверждённого самостоятельного интента.
+
+---
+
+## 16. Обновление состояния — 2026-09-28
+
+### Structured Data / Schema.org — завершено
+
+Системная JSON-LD-разметка внедрена централизованно через `src/_includes/partials/schema.njk`, подключённый из общего `head.njk`.
+
+Реализовано:
+
+- `WebSite` для RU и UA главных;
+- `Article` для всех статей;
+- `BreadcrumbList` для статей и категорий;
+- `Recipe` для рецепта мастики из маршмеллоу (`post_id: 645`);
+- RU/UA-симметрия;
+- централизованное формирование абсолютных URL изображений и категорий;
+- безопасная JSON-LD-сериализация через фильтр `jsonLd`;
+- `SearchAction` не добавлялся, поскольку собственного поиска на сайте нет.
+
+Старые `recipe-schema-marshmallow.njk` и `recipe-schema-marshmallow-uk.njk` удалены. Legacy Recipe Microdata полностью заменён JSON-LD. Неподтверждённые `aggregateRating`, `reviewCount`, nutrition, `LowFatDiet`, `recipeCuisine`, Flash `VideoObject`, interaction/comment data, а также не подтверждённые видимым контентом `prepTime`, `cookTime` и `recipeYield` не переносились.
+
+Финальная проверка production: `WebSite: 2`, `Article: 58`, `BreadcrumbList: 64`, `Recipe: 2`, `Legacy Recipe Microdata: 0`, `Empty category breadcrumb items: 0`.
+
+### Category listing
+
+В четырёх старых category source-файлах обнаружены и удалены ручные карточки, дублировавшие автоматический `categoryArticlesFor`:
+
+- `src/category/uroki-lepki/index.html`;
+- `src/category/vse-o-mastike/index.html`;
+- `src/uk/category/uroki-lepki/index.html`;
+- `src/uk/category/vse-o-mastike/index.html`.
+
+Уникальные описания и `page-footer` сохранены. После очистки RU/UA category listing проверен: дубликатов нет; для затронутых категорий `missing=0`, `extra=0`.
+
+### Sitemap
+
+`sitemap.xml` актуализирован после добавления `published` к legacy-материалам и внедрения динамического `lastmod` агрегаторов. `lastmod` отражает фактические даты материалов, а не build date.
+
+### Build / publish / Git
+
+Финальная сборка: `[11ty] Wrote 74 files`. `publish.ps1` выполнен успешно. Проверены RU/UA Schema, Recipe 645, BreadcrumbList, отсутствие legacy Microdata, category listing, source diff, `git diff --check` и staged diff.
+
+Commit: `c34f8c9 Add structured data and clean category listings`. Commit отправлен в `origin/main`; после push рабочее дерево чистое.
+
+### Текущая точка продолжения
+
+Structured Data / Schema.org считать завершённым инфраструктурным этапом.
+
+Следующая техническая задача по `docs/CONTENT_PLAN.md` — `Open Graph / social meta`: централизованная генерация через общий `head`, RU/UA-симметрия и безопасные fallback для страниц без hero-изображения.
+
+Глоссарий остаётся инфраструктурным направлением, но должен развиваться вслед за основным контентом, а не как отдельный SEO-проект.
+
+Следующий запланированный самостоятельный материал мужского кластера — `post_id: 1045`, «Торт для рыбака». Перед написанием снова пройти `ARTICLE_PRODUCTION_REGULATION.md`: интент → каннибализация → SERP → структура.
 
 Отдельный обзор `CMC / Tylose / Gum-Tex / трагакант` по-прежнему не развивать без подтверждённого самостоятельного интента.
