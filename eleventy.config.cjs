@@ -148,6 +148,8 @@ module.exports = function (eleventyConfig) {
     return date.toISOString().slice(0, 10);
   });
 
+  eleventyConfig.addPassthroughCopy({ "_redirects": "_redirects" });
+
   return {
     dir: {
       input: "src",
