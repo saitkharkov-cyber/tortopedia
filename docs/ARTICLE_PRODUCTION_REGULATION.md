@@ -301,9 +301,8 @@ Production HTML вручную не редактировать. Все изме�
 - [ ] `layout`
 - [ ] `title`
 - [ ] `seo_title`
-- [ ] `description`
+- [ ] `seo_description`
 - [ ] `lang`
-- [ ] `permalink`
 - [ ] `canonical`
 - [ ] `hreflang_ru`
 - [ ] `hreflang_uk`
@@ -402,9 +401,8 @@ UA-версия создаётся только в `src/uk/`.
 - [ ] `layout`
 - [ ] `title`
 - [ ] `seo_title`
-- [ ] `description`
+- [ ] `seo_description`
 - [ ] `lang`
-- [ ] `permalink`
 - [ ] UA `canonical`
 - [ ] `hreflang_ru`
 - [ ] `hreflang_uk`
@@ -431,7 +429,7 @@ UA-версия должна передавать тот же интент, фа
 
 - [ ] Перевести и адаптировать H1
 - [ ] Адаптировать `seo_title`
-- [ ] Адаптировать `description`
+- [ ] Адаптировать `seo_description`
 - [ ] Перевести и адаптировать весь пользовательский текст
 - [ ] Сохранить фактическую последовательность инструкций
 - [ ] Сохранить утверждённые границы материала
