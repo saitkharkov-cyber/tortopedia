@@ -43,21 +43,35 @@ docs/ARTICLE_PRODUCTION_REGULATION.md
 
 ## Текущая точка
 
-Этап подготовки статьи пройден до создания исходника.
+RU и UA source подготовлены.
+
+Созданы:
+
+RU:
+src/tort-dlya-rybaka/index.html
+
+UA:
+src/uk/tort-dlya-rybalky/index.html
 
 Завершено:
 
 - фактчек технологических решений;
-- создание RU source;
-- базовая проверка структуры статьи.
-
-Создан файл:
-
-src/tort-dlya-rybaka/index.html
+- RU source;
+- UA source;
+- локализация UA Front Matter и ARTICLE_PASSPORT;
+- проверка структуры H1/H2/H3;
+- проверка UA на русские буквы ы/э/ё/ъ — clean;
+- проверка BOM;
+- исходящая перелинковка RU/UA;
+- связь хаб 1043 ↔ статья 1045 RU/UA;
+- линейная навигация 1044 → 1045 RU/UA;
+- git diff --check — без ошибок.
 
 Следующий этап:
 
-подготовка UA-версии + визуальная подготовка материала
+подготовка и утверждение изображений
+→ интеграция изображений
+→ build / _site-pilot / publish
 
 ---
 
@@ -74,27 +88,75 @@ src/tort-dlya-rybaka/index.html
 Ключевые решения:
 
 - леска используется как главный символ рыбалки;
-- перед подачей торта она должна быть снята;
-- крючок используется только как безопасная съедобная стилизация;
+- перед подачей и разрезанием торта она должна быть полностью снята;
+- настоящий рыболовный крючок не используется;
+- крючок — только безопасная съедобная стилизация;
 - описан домашний вариант декоративного геля для воды;
+- в мастичном варианте главный акцент — сачок с тремя рыбками;
 - сохранён принцип:
   один сюжет + один главный акцент + поддерживающие детали.
 
 ---
 
-## Текущий контент
+## Front Matter 1045
 
-Создано:
+Проверено для UA:
 
-RU source:
-src/tort-dlya-rybaka/index.html
+- layout: layouts/article-uk.njk
+- canonical: https://tortopedia.in.ua/uk/tort-dlya-rybalky/
+- hreflang RU/UA;
+- reverse lang_switch_url;
+- lang: uk-UA;
+- post_id: 1045;
+- published: 2026-09-30;
+- category_slug: idei-i-vdohnovenie;
+- локализованные category_title/category_url;
+- prev_url / prev_title на UA 1044;
+- title / seo_title / seo_description;
+- image_src / image dimensions / image_alt;
+- shop_opportunities сохранён.
 
-Проверено:
+shop_opportunities:
 
-- H1/H2/H3;
-- структура статьи;
-- UTF-8;
-- отсутствие повреждения кириллицы после вставки через PowerShell.
+- product: neutral-piping-gel
+- context: water-decoration
+- status: candidate
+
+---
+
+## Внутренняя перелинковка
+
+Реализовано.
+
+Исходящие из 1045:
+
+RU:
+- /mastika-dlya-lepki-figurok/
+- /kak-sushit-figurki-iz-mastiki/
+- /kak-ukrasit-tort-dlya-muzhchiny/
+
+UA:
+- /uk/mastika-dlya-liplennya-figurok/
+- /uk/yak-sushyty-fihurky-z-mastyky/
+- /uk/yak-prykrasyty-tort-dlya-cholovika/
+
+Входящая из хаба 1043:
+
+RU:
+- /kak-ukrasit-tort-dlya-muzhchiny/ → /tort-dlya-rybaka/
+
+UA:
+- /uk/yak-prykrasyty-tort-dlya-cholovika/ → /uk/tort-dlya-rybalky/
+
+Линейная навигация:
+
+1044 RU:
+- next_url: ../tort-dlya-rybaka/
+- next_title: "Торт для рыбака: как украсить своими руками"
+
+1044 UA:
+- next_url: ../tort-dlya-rybalky/
+- next_title: "Торт для рибалки: як прикрасити своїми руками"
 
 ---
 
@@ -124,39 +186,6 @@ src/tort-dlya-rybaka/index.html
 
 ---
 
-## Внутренняя перелинковка
-
-Проверить:
-
-Входящая ссылка из хаба:
-
-/kak-ukrasit-tort-dlya-muzhchiny/
-/uk/yak-prykrasyty-tort-dlya-cholovika/
-
-Исходящие ссылки:
-
-/mastika-dlya-lepki-figurok/
-/kak-sushit-figurki-iz-mastiki/
-
----
-
-## Tortopedia-shop
-
-Зафиксировано потенциальное направление:
-
-shop_opportunities:
-  - product: neutral-piping-gel
-    context: water-decoration
-    status: candidate
-
-Документ:
-
-docs/TORTOPEDIA_SHOP_ASSORTMENT.md
-
-При дальнейшей обработке статьи проверить перенос в Front Matter.
-
----
-
 ## Git состояние
 
 Репозиторий:
@@ -169,13 +198,26 @@ main
 
 Последний commit:
 
-f118a81 Add fishing cake article
+739b1b8 Update article workflow state
 
-После него необходимо проверить актуальный статус:
+Текущее рабочее дерево после последней проверки:
 
-git status --short
+modified:
+- src/kak-ukrasit-tort-dlya-muzhchiny/index.html
+- src/tort-dlya-rybaka/index.html
+- src/tort-futbolnoe-pole/index.html
+- src/uk/tort-futbolne-pole/index.html
+- src/uk/yak-prykrasyty-tort-dlya-cholovika/index.html
 
-Не считать старые данные о состоянии рабочего дерева актуальными без проверки.
+untracked:
+- src/uk/tort-dlya-rybalky/
+
+Примечание:
+
+- UA 1045 пока не добавлен в index;
+- commit/push текущих изменений не выполнялись;
+- RU 1045 при безопасной перезаписи был приведён к UTF-8 без BOM;
+- предупреждения Git о LF → CRLF есть, но git diff --check ошибок не показывает.
 
 ---
 
@@ -183,20 +225,21 @@ git status --short
 
 По статье 1045:
 
-- подготовить UA-версию;
-- добавить/проверить перелинковку;
-- подготовить изображения;
-- проверить Front Matter;
-- выполнить build;
-- проверить _site-pilot;
-- publish;
-- production-проверка.
+- подготовить и утвердить изображения;
+- интегрировать изображения;
+- проверить итоговую RU/UA эквивалентность;
 
 ---
 
 ## Следующий шаг
 
-Подготовить UA-версию статьи 1045 с отдельной проверкой терминов и ссылок.
+Провести финальную техническую проверку UA source:
+
+- BOM;
+- href;
+- случайные русские фрагменты.
+
+После этого перейти к визуальной подготовке статьи.
 
 ---
 
@@ -210,4 +253,8 @@ git status --short
 - production HTML вручную не редактировать;
 - изображения интегрировать только после утверждения;
 - PowerShell-команды давать одной физической строкой;
+- не использовать PowerShell here-string с кириллицей для записи HTML;
+- не трогать незапланированные изменения;
+- перед commit показать, что именно будет добавлено;
+- не использовать git add . для targeted commit;
 - commit/push только после отдельного разрешения.
