@@ -149,6 +149,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({ "_redirects": "_redirects" });
+  eleventyConfig.addPassthroughCopy({ "src/google7b9afa6825f1a09a.html": "google7b9afa6825f1a09a.html" });
 
   return {
     dir: {
