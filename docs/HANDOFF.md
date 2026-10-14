@@ -39,8 +39,12 @@
 - git diff --check.
 
 Текущее состояние Git:
-- последний commit:
-  739b1b8 Update article workflow state
+Репозиторий:
+D:\Git\tortopedia
+Branch:
+main
+Последний commit:
+d030606 Add fishing cake article UA version and linking
 
 Незавершено:
 - подготовить и утвердить изображения;
