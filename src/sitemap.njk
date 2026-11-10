@@ -3,9 +3,10 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {%- for item in collections.all %}
-{%- if item.url and item.url != "/sitemap.xml" %}
+{%- if item.url and item.url != "/sitemap.xml" and item.url != "/google7b9afa6825f1a09a/" and item.url != "/google7b9afa6825f1a09a.html" %}
   <url>
     <loc>https://tortopedia.in.ua{{ item.url }}</loc>
 {%- if item.data.updated %}
@@ -17,6 +18,10 @@ eleventyExcludeFromCollections: true
 {%- if listingLastmod %}
     <lastmod>{{ listingLastmod | sitemapDate }}</lastmod>
 {%- endif %}
+{%- endif %}
+{%- if item.data.hreflang_ru and item.data.hreflang_uk %}
+    <xhtml:link rel="alternate" hreflang="ru-UA" href="{{ item.data.hreflang_ru }}"/>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="{{ item.data.hreflang_uk }}"/>
 {%- endif %}
   </url>
 {%- endif %}
